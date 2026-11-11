@@ -140,7 +140,18 @@ numbers. Entries marked ≈ are estimates. For packaged food, use the label (Set
 Every change is built and tested automatically on GitHub's Mac runners (see the
 [Actions tab](https://github.com/varnealt2-cloud/gym-planner-ios/actions)):
 
-TESTED_PLACEHOLDER
+- **iPhone, iOS 26** (iPhone 17 Pro Max simulator) and **iPad, iPadOS 26** (iPad Pro 13-inch simulator), built
+  with Xcode 26.
+- **iPhone, iOS 18** and **iPad, iPadOS 18** simulators, built with Xcode 16.
+
+On each of them the tests start the real app and check that it opens blank, takes a person's own calorie and
+protein goals, shows every tab, has no supplements pre-filled, and still has the data after a relaunch and
+after the web view's storage is wiped. The page itself is also run through its flows in a desktop browser
+(setup, food logging, supplements, the coach, backup and restore).
+
+iOS 15, 16 and 17 are supported by the code but GitHub's runners no longer offer those simulators, so they are
+not tested automatically. The Claude connection and the camera were not exercised by the automated tests. If
+something misbehaves, please open an issue.
 
 ## For developers
 
