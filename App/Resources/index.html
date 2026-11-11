@@ -473,12 +473,48 @@ td strong { font-weight: 650; }
 .exercise.is-expanded .art { height: 230px; padding: 14px; }
 .exercise.is-expanded .expand-mark { display: none; }
 
-.figure .head { fill: currentColor; stroke: none; }
-.figure .gear { opacity: .38; }
-.figure .pose-a { animation: pose-a 2.4s ease-in-out infinite; }
-.figure .pose-b { animation: pose-b 2.4s ease-in-out infinite; }
-@keyframes pose-a { 0%, 40% { opacity: 1; } 50%, 90% { opacity: .16; } 100% { opacity: 1; } }
-@keyframes pose-b { 0%, 40% { opacity: .16; } 50%, 90% { opacity: 1; } 100% { opacity: .16; } }
+.figure { --skin: #E2AC86; --skin-far: #B9825F; --cloth: #6A3BE0; --cloth-far: #4521A6; --hair: #2A1B14; --ink: #2B2540; overflow: visible; }
+.figure path { stroke: none; }
+.figure .skin { fill: url(#fig-skin) var(--skin); }
+.figure .far { fill: var(--skin-far); }
+.figure .shade { fill: rgba(120, 62, 36, .5); }
+.figure .cloth { fill: url(#fig-cloth) var(--cloth); }
+.figure .cloth.far { fill: var(--cloth-far); }
+.figure .shoe { fill: var(--ink); }
+.figure .shoe.far { fill: #17122A; }
+.figure .hair { fill: var(--hair); }
+.figure .cut { fill: none; stroke: rgba(120, 62, 36, .6); stroke-width: .42; stroke-linecap: round; stroke-linejoin: round; }
+.figure .iron { fill: var(--ink); }
+.figure .iron.far { fill: #4A4266; }
+.figure .hub { fill: #B9B2D6; }
+.figure .bar { fill: none; stroke: #6F6890; stroke-width: 1.1; stroke-linecap: round; }
+.figure .bar.far { stroke: #8A84A6; }
+.figure .gear { fill: none; stroke: #8E7FC0; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; opacity: .6; }
+/* On the purple workout card the kit turns white so it stays visible. */
+.workout-art .figure .cloth { fill: #2A1578; }
+.workout-art .figure .cloth.far { fill: #1D0D5C; }
+.workout-art .figure .gear { stroke: #fff; opacity: .55; }
+.workout-art .figure .bar { stroke: #EDE6FF; }
+.workout-art .figure .shoe, .workout-art .figure .iron { fill: #1B0F4A; }
+
+.goal-note { margin: 10px 0 2px; padding: 10px 14px; border-radius: 18px; background: var(--amber-soft); color: var(--amber-ink); font-size: 14px; font-weight: 600; line-height: 1.4; box-shadow: inset 0 0 0 1px rgba(124, 77, 255, .16), inset 0 1.5px 0 rgba(255, 255, 255, .8); }
+.goal-note:empty { display: none; }
+.setup-step { margin: 20px 0 4px; font-family: var(--round); font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--amber-ink); }
+.setup-step:first-of-type { margin-top: 14px; }
+/* Until setup is done there is only one screen, so the tab bar stays out of the way of the form. */
+body.needs-setup .nav { display: none; }
+.body-pick { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 12px 0 14px; }
+.body-card { position: relative; display: grid; justify-items: center; gap: 4px; padding: 10px 8px 12px; border-radius: 26px; background: radial-gradient(circle at 50% 28%, #FFFFFF 0%, #EEE6FF 100%); box-shadow: var(--shadow-sm), inset 0 2px 0 #fff, inset 0 -4px 8px rgba(124, 77, 255, .12); cursor: pointer; transition: transform .22s var(--spring), box-shadow .22s ease; -webkit-tap-highlight-color: transparent; }
+.body-card:active { transform: scale(.97); }
+.body-card input { position: absolute; opacity: 0; pointer-events: none; }
+.body-card .body-art { display: block; width: 100%; height: 132px; }
+.body-card .body-art svg { width: 100%; height: 100%; display: block; }
+.body-card b { font-family: var(--round); font-size: 16px; font-weight: 750; color: var(--ink2); }
+.body-card:has(input:checked) { box-shadow: 0 0 0 3px var(--amber), 0 14px 22px -14px rgba(98, 48, 232, .8), inset 0 2px 0 #fff; }
+.body-card:has(input:checked) b { color: var(--amber-ink); }
+.body-card:has(input:focus-visible) { outline: 3px solid rgba(124, 77, 255, .45); outline-offset: 3px; }
+.body-card.is-picked { box-shadow: 0 0 0 3px var(--amber), 0 14px 22px -14px rgba(98, 48, 232, .8), inset 0 2px 0 #fff; }
+.body-card.is-picked b { color: var(--amber-ink); }
 
 .phases > li { display: flex; align-items: center; gap: 12px; padding: 11px 12px; margin: 0 -12px; border-radius: 20px; }
 .phases > li > b { display: grid; place-items: center; flex: none; width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(180deg, #fff, #EFE8FF); color: var(--amber-ink); box-shadow: var(--shadow-sm), inset 0 1.5px 0 #fff; font-family: var(--round); font-size: 14px; }
@@ -655,7 +691,6 @@ body.typing .composer { bottom: calc(var(--kb, 0px) + 8px); }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
-  .figure .pose-a { opacity: .22; }
 }
 /* Where the browser cannot blur what is behind an element, make the glass more solid so text stays readable. */
 @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
@@ -676,6 +711,8 @@ window.addEventListener('unhandledrejection',function(e){window.__gpErr(e&&e.rea
 <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
   <defs>
     <linearGradient id="ring-gradient" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B79CFF"/><stop offset=".55" stop-color="#7C4DFF"/><stop offset="1" stop-color="#C13DF0"/></linearGradient>
+    <linearGradient id="fig-skin" gradientUnits="userSpaceOnUse" x1="14" y1="2" x2="36" y2="48"><stop offset="0" stop-color="#F2C4A0"/><stop offset="1" stop-color="#CC8F68"/></linearGradient>
+    <linearGradient id="fig-cloth" gradientUnits="userSpaceOnUse" x1="14" y1="2" x2="36" y2="48"><stop offset="0" stop-color="#8A5CFF"/><stop offset="1" stop-color="#5325C8"/></linearGradient>
     <symbol id="icon-today" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M9 21v-6h6v6"/></symbol>
     <symbol id="icon-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/><circle cx="19" cy="12" r="1.6" fill="currentColor" stroke="none"/></symbol>
     <symbol id="icon-expand" viewBox="0 0 24 24"><path d="M9 4H4v5m11-5h5v5M4 15v5h5m11-5v5h-5"/></symbol>
@@ -723,22 +760,23 @@ window.addEventListener('unhandledrejection',function(e){window.__gpErr(e&&e.rea
       </button>
       <form class="panel" id="setup-form">
         <h2>Set up your plan</h2>
-        <p class="small muted">Nothing is filled in yet. Enter your own numbers. You can change them later in Settings, and everything stays on this device.</p>
-        <details id="setup-helper">
-          <summary><span>Help me pick my numbers</span></summary>
-          <div class="panel-body">
-            <div class="fields">
-              <div class="field"><label for="setup-sex">Sex</label><select class="control" id="setup-sex"><option value="">Prefer not to say</option><option value="male">Male</option><option value="female">Female</option></select></div>
-              <div class="field"><label for="setup-age">Age</label><input class="control" id="setup-age" type="number" inputmode="numeric" min="13" max="100" step="1"></div>
-              <div class="field"><label for="setup-feet">Height (ft)</label><input class="control" id="setup-feet" type="number" inputmode="numeric" min="3" max="8" step="1"></div>
-              <div class="field"><label for="setup-inches">Height (in)</label><input class="control" id="setup-inches" type="number" inputmode="numeric" min="0" max="11" step="1"></div>
-              <div class="field"><label for="setup-weight">Weight (lb)</label><input class="control" id="setup-weight" type="number" inputmode="decimal" min="50" max="700" step="0.1"></div>
-              <div class="field"><label for="setup-goal">Goal</label><select class="control" id="setup-goal"><option value="gain">Gain muscle</option><option value="lose">Lose fat</option><option value="recomp">Both at once</option><option value="maintain">Stay the same</option></select></div>
-            </div>
-            <button class="btn" type="button" id="setup-suggest">Suggest calories and protein</button>
-            <p class="msg" id="setup-suggestion" role="status"></p>
-          </div>
-        </details>
+        <p class="small muted">Nothing is filled in yet. Enter your own details. You can change them later in Settings, and everything stays on this device.</p>
+        <h3 class="setup-step">You</h3>
+        <p class="caption">Sets the body shown in the exercise drawings.</p>
+        <div class="body-pick" role="radiogroup" aria-label="Body for the drawings">
+          <label class="body-card"><input type="radio" name="setup-sex" value="male"><span class="body-art" data-body-art="male" aria-hidden="true"></span><b>Man</b></label>
+          <label class="body-card"><input type="radio" name="setup-sex" value="female"><span class="body-art" data-body-art="female" aria-hidden="true"></span><b>Woman</b></label>
+        </div>
+        <div class="field"><label for="setup-goal">Your goal</label><select class="control" id="setup-goal"><option value="">Choose a goal</option><option value="gain">Build muscle (hypertrophy)</option><option value="strength">Get stronger</option><option value="lose">Lose fat</option><option value="recomp">Lose fat and build muscle</option><option value="maintain">Stay in shape</option></select></div>
+        <div class="fields">
+          <div class="field"><label for="setup-age">Age</label><input class="control" id="setup-age" type="number" inputmode="numeric" min="13" max="100" step="1"></div>
+          <div class="field"><label for="setup-weight">Weight (lb)</label><input class="control" id="setup-weight" type="number" inputmode="decimal" min="50" max="700" step="0.1"></div>
+          <div class="field"><label for="setup-feet">Height (ft)</label><input class="control" id="setup-feet" type="number" inputmode="numeric" min="3" max="8" step="1"></div>
+          <div class="field"><label for="setup-inches">Height (in)</label><input class="control" id="setup-inches" type="number" inputmode="numeric" min="0" max="11" step="1"></div>
+        </div>
+        <button class="btn" type="button" id="setup-suggest">Work out my calories and protein</button>
+        <p class="msg" id="setup-suggestion" role="status"></p>
+        <h3 class="setup-step">Your daily numbers</h3>
         <div class="fields">
           <div class="field"><label for="setup-calories">Calories per day</label><input class="control" id="setup-calories" type="number" inputmode="numeric" min="1" max="100000" required></div>
           <div class="field"><label for="setup-protein">Protein per day (g)</label><input class="control" id="setup-protein" type="number" inputmode="numeric" min="1" max="10000" required></div>
@@ -889,6 +927,7 @@ window.addEventListener('unhandledrejection',function(e){window.__gpErr(e&&e.rea
       </section>
       <section class="panel" aria-labelledby="workout-title">
         <div class="workout-head"><div><h2 id="workout-title"></h2><p class="caption"><span id="workout-date"></span> · <span id="workout-focus"></span></p></div><span class="badge blue" id="workout-phase"></span></div>
+        <p class="goal-note" id="workout-goal"></p>
         <div id="exercise-list"></div>
         <p class="caption">Tap a drawing to make it bigger. Watch opens YouTube, so it needs internet.</p>
       </section>
@@ -1061,6 +1100,17 @@ window.addEventListener('unhandledrejection',function(e){window.__gpErr(e&&e.rea
         <button class="back" type="button" data-view="more"><svg class="icon" aria-hidden="true"><use href="#icon-back"></use></svg>More</button>
         <h1 id="settings-title">Settings</h1>
       </div>
+      <section class="panel" id="look-card" aria-labelledby="look-title">
+        <h2 id="look-title">Body and goal</h2>
+        <p class="small muted">Sets the body shown in the exercise drawings and fits the sets, reps and walks to your goal.</p>
+        <div class="body-pick" role="radiogroup" aria-label="Body for the drawings">
+          <label class="body-card"><input type="radio" name="look-sex" value="male"><span class="body-art" data-body-art="male" aria-hidden="true"></span><b>Man</b></label>
+          <label class="body-card"><input type="radio" name="look-sex" value="female"><span class="body-art" data-body-art="female" aria-hidden="true"></span><b>Woman</b></label>
+        </div>
+        <div class="field"><label for="look-goal">Goal</label><select class="control" id="look-goal"><option value="">Choose a goal</option><option value="gain">Build muscle (hypertrophy)</option><option value="strength">Get stronger</option><option value="lose">Lose fat</option><option value="recomp">Lose fat and build muscle</option><option value="maintain">Stay in shape</option></select></div>
+        <p class="caption" id="look-goal-note"></p>
+        <p class="msg" id="look-message" role="status"></p>
+      </section>
       <form class="panel" id="settings-form">
         <h2>Goals and schedule</h2>
         <div class="fields">
@@ -1075,14 +1125,12 @@ window.addEventListener('unhandledrejection',function(e){window.__gpErr(e&&e.rea
       </form>
       <form class="panel" id="profile-form" aria-labelledby="profile-title">
         <h2 id="profile-title">About you</h2>
-        <p class="small muted">Optional. It helps the coach give advice that fits you. It stays on this device and is only sent to Claude with your questions if you add an API key.</p>
+        <p class="small muted">Optional. It helps the coach give advice that fits you. It stays on this device and is only sent to Claude with your questions if you add an API key. Your weight comes from your weigh-ins.</p>
         <div class="fields">
-          <div class="field"><label for="profile-sex">Sex</label><select class="control" id="profile-sex"><option value="">Prefer not to say</option><option value="male">Male</option><option value="female">Female</option></select></div>
           <div class="field"><label for="profile-age">Age</label><input class="control" id="profile-age" type="number" inputmode="numeric" min="13" max="100" step="1"></div>
           <div class="field"><label for="profile-feet">Height (ft)</label><input class="control" id="profile-feet" type="number" inputmode="numeric" min="3" max="8" step="1"></div>
           <div class="field"><label for="profile-inches">Height (in)</label><input class="control" id="profile-inches" type="number" inputmode="numeric" min="0" max="11" step="1"></div>
         </div>
-        <div class="field"><label for="profile-goal">Goal</label><select class="control" id="profile-goal"><option value="">Not set</option><option value="gain">Gain muscle</option><option value="lose">Lose fat</option><option value="recomp">Both at once</option><option value="maintain">Stay the same</option></select></div>
         <div class="field"><label for="profile-notes">Anything the coach should know</label><textarea class="control" id="profile-notes" maxlength="600" placeholder="Training history, injuries, foods you avoid, your schedule…"></textarea></div>
         <button class="btn primary" type="submit">Save</button>
         <p class="msg" id="profile-message" role="status"></p>
@@ -1896,7 +1944,7 @@ const MEALS = [
   ["snack", "Snacks", "snack"]
 ];
 const PILL_WHEN = { meal: "With your first meal", before: "30 minutes before gym", after: "After gym", any: "Any time" };
-const GOALS = { gain: "gain muscle", lose: "lose fat", recomp: "gain muscle and lose fat at the same time", maintain: "stay at the same weight" };
+const GOALS = { gain: "build muscle", strength: "get stronger", lose: "lose fat", recomp: "build muscle and lose fat at the same time", maintain: "stay in shape" };
 const BLANK_PROFILE = { sex: "", age: "", heightIn: "", goal: "", notes: "" };
 const DEFAULT_SETTINGS = { calories: 2500, protein: 130, start: "", gym: "18:00", pills: [], profile: { ...BLANK_PROFILE } };
 const STORAGE_KEY = "gym-plan:tracker-v2";
@@ -3182,6 +3230,7 @@ function renderToday() {
   $("today-focus").textContent = workout.m + (phase && phase.upcoming ? " · Starts " + monthDay.format(calendarMs(state.settings.start)) : "");
   const ready = Boolean(state.settings.start);
   $("setup-form").hidden = ready;
+  document.body.classList.toggle("needs-setup", !ready);
   for (const id of ["home-food-title", "home-pills-title"]) $(id).closest("section").hidden = !ready;
   $("today-weight").closest("button").hidden = !ready;
   if (!ready && !$("setup-date").value) $("setup-date").value = clock.date;
@@ -3255,176 +3304,535 @@ $("pill-checks").addEventListener("change", (event) => {
   renderToday();
   (_a = $("pill-checks").querySelector('input[data-pill="'.concat(id, '"]'))) == null ? void 0 : _a.focus({ preventScroll: true });
 });
-const E = {
-  flatBench: "M7 34h36M14 34v10m22-10v10",
-  inclineBench: "M10 18 29 36h12m-12 0v8m10-8v8",
-  floor: "M4 45h43",
-  chair: "M14 31h18m-13 0v13",
-  topBar: "M10 4h32",
-  cablePost: "M46 5v39m-6 0h9",
-  treadmill: "M3 45h44v-7L3 43Z M44 38V22h-9",
-  calfStep: "M24 45h20v-4H24",
-  bar: (x, y) => "M".concat(x - 9, " ").concat(y, "h18m-15-3v6m12-6v6"),
-  dumbbell: (x, y) => "M".concat(x - 5, " ").concat(y, "h10m-9-2v4m8-4v4"),
-  uprightBell: (x, y) => "M".concat(x, " ").concat(y - 5, "v10m-2-9h4m-4 8h4")
+// ---------------------------------------------------------------------------------------------------
+// Exercise figures: an athletic body drawn from a small skeleton, in a male, female or neutral build,
+// moving smoothly between the two ends of each exercise.
+//
+// A pose is a set of joint angles. Side view angles: 0 points down, positive turns toward the way the
+// figure faces (90 = straight ahead, 180 = overhead). Torso lean: 0 is upright, positive leans forward.
+// Front view angles: 0 points down, positive swings out to that side (90 = straight out, 180 = up).
+// ---------------------------------------------------------------------------------------------------
+const FIG_BUILD = {
+  male: {
+    head: 2.65, neck: 1.5, neckR: 1.3, torso: 12.4, upper: 6.5, fore: 5.7, hand: 1.05, thigh: 9.9, shin: 9.4, foot: 4.1,
+    arm: [2.05, 1.5, 1.05], leg: [3.05, 2.05, 1.2], biceps: 0.55, calf: 0.6, quad: 0.5,
+    front: [[-0.05, 1.5], [0.06, 2.6], [0.24, 3.45], [0.44, 2.95], [0.7, 2.5], [0.92, 2.45], [1.08, 2.0]],
+    back: [[1.1, 2.7], [0.98, 3.0], [0.8, 2.5], [0.6, 2.2], [0.24, 2.95], [0.06, 2.5], [-0.05, 1.5]],
+    wide: { shoulder: 6.3, chest: 5.3, waist: 3.85, hip: 4.1, joint: 2.2 }
+  },
+  female: {
+    head: 2.5, neck: 1.5, neckR: 1.0, torso: 11.6, upper: 6.0, fore: 5.3, hand: 0.9, thigh: 9.8, shin: 9.3, foot: 3.7,
+    arm: [1.5, 1.12, 0.82], leg: [3.0, 1.85, 1.05], biceps: 0.25, calf: 0.5, quad: 0.4,
+    front: [[-0.05, 1.2], [0.07, 1.9], [0.27, 3.45], [0.43, 2.35], [0.68, 1.9], [0.92, 2.3], [1.08, 1.9]],
+    back: [[1.12, 3.0], [0.98, 3.45], [0.8, 2.75], [0.58, 1.75], [0.24, 2.2], [0.06, 1.9], [-0.05, 1.2]],
+    wide: { shoulder: 4.9, chest: 4.15, waist: 3.0, hip: 4.55, joint: 2.3 }
+  }
 };
-function pose(head, body, equipment = "", weights = "") {
-  return '<path class="gear" d="'.concat(equipment, '" stroke-width="1.5"/><path d="').concat(body, '"/>\n    <circle class="head" cx="').concat(head[0], '" cy="').concat(head[1], '" r="4.1"/><path d="').concat(weights, '" stroke-width="2"/>');
-}
-function benchPoses(incline, dumbbells) {
-  const low = dumbbells ? E.dumbbell(23, 18) + E.dumbbell(32, 21) : E.bar(25, incline ? 17 : 26);
-  const high = dumbbells ? E.dumbbell(24, 6) + E.dumbbell(33, 9) : E.bar(25, 9);
-  return incline ? [
-    pose([12, 15], "M15 19 28 34l12-2 3 13h5 M18 22l1 7 6-11", E.inclineBench, low),
-    pose([12, 15], "M15 19 28 34l12-2 3 13h5 M18 22l4-8 3-7", E.inclineBench, high)
-  ] : [
-    pose([11, 27], "M15 29l19 2 9 5v9h5 M18 30l3 6 4-10", E.flatBench, low),
-    pose([11, 27], "M15 29l19 2 9 5v9h5 M18 30l5-10 2-11", E.flatBench, high)
-  ];
-}
-function pressPoses(dumbbells) {
-  const support = dumbbells ? E.chair : E.floor;
-  const low = dumbbells ? E.dumbbell(11, 15) + E.dumbbell(40, 15) : E.bar(25, 16) + "M16 16h-5m23 0h6";
-  const high = dumbbells ? E.dumbbell(16, 5) + E.dumbbell(35, 5) : E.bar(25, 5);
-  const legs = dumbbells ? "M25 31l-8 3-2 11m10-14 9 3 2 11" : "M25 33l-7 12m7-12 8 12";
-  return [
-    pose([25, 12], "M25 16v17m-6-13h13l7 5 1-9m-21 4-7 5-1-9 " + legs, support, low),
-    pose([25, 12], "M25 16v17m-6-13h13l3-8V5m-16 15-3-8V5 " + legs, support, high)
-  ];
-}
-function curlPoses(hammer) {
-  const torso = "M23 12l1 17-5 15h5m0-15 7 15h4";
-  const bell = hammer ? E.uprightBell : E.dumbbell;
-  return [
-    pose([23, 8], torso + " M24 16l3 10 1 10", E.floor, bell(28, 36)),
-    pose([23, 8], torso + " M24 16l3 10 9-9", E.floor, bell(36, 17))
-  ];
-}
-function rowPoses() {
-  const base = "M15 14l1 17 13 4 10 6h5";
-  const equipment = "M8 33h17m-11 0v11m29-12 4 12";
-  return [
-    pose([14, 10], base + " M16 17l11 4 12 2", equipment + " M39 23h9", E.uprightBell(39, 23)),
-    pose([14, 10], base + " M16 17l-4 9 13-3", equipment + " M25 23h23", E.uprightBell(25, 23))
-  ];
-}
-const pressdown = [
-  pose(
-    [20, 8],
-    "M20 12l3 17-6 15h5m1-15 6 15h5 M21 16l6 10 8-6",
-    E.cablePost + " M46 6 35 20",
-    E.dumbbell(35, 20)
-  ),
-  pose(
-    [20, 8],
-    "M20 12l3 17-6 15h5m1-15 6 15h5 M21 16l6 10 5 8",
-    E.cablePost + " M46 6 32 34",
-    E.dumbbell(32, 34)
-  )
-];
-const walkPoses = (equipment) => [
-  pose([25, 8], "M24 12l-3 14 9 6 7 9h4m-20-15-7 9-8 7m18-26-6 5-7-2m13-3 6 6 6-3", equipment),
-  pose([25, 8], "M24 12l-3 14 1 10 9 6m-10-16 10 6-5 6m-2-22 7 3 4-3m-11 0-6 7-7-2", equipment)
-];
-const artByExercise = {
-  "Bench press": benchPoses(false, false),
-  "Incline dumbbell press": benchPoses(true, true),
-  "Shoulder press": pressPoses(false),
-  "Lateral raises": [
-    pose([25, 9], "M25 13v18l-6 13m6-13 6 13M18 17h14l5 16m-19-16-5 16", E.floor, E.dumbbell(13, 33) + E.dumbbell(37, 33)),
-    pose([25, 9], "M25 13v18l-6 13m6-13 6 13M18 17h14l13-1m-27 1-13-1", E.floor, E.dumbbell(6, 16) + E.dumbbell(44, 16))
-  ],
-  "Tricep pushdowns": pressdown,
-  "Lat pulldown": [
-    pose(
-      [25, 20],
-      "M25 24v11l-10 3v6m10-9 10 3v6M18 27h14l4-10V7M18 27l-4-10V7",
-      "M9 36h31m-25 0v8m10-41v4",
-      E.bar(25, 7) + "M14 7h22"
-    ),
-    pose(
-      [25, 15],
-      "M25 19v16l-10 3v6m10-9 10 3v6M18 24h14l6 5-2-10M18 24l-6 5 2-10",
-      "M9 36h31m-25 0v8m10-41v16",
-      E.bar(25, 19) + "M14 19h22"
-    )
-  ],
-  "Cable row": rowPoses(),
-  "Face pulls": [
-    pose(
-      [19, 8],
-      "M18 12l-2 16-6 16m6-16 8 16m-6-28 13 2 10-2",
-      E.cablePost + " M41 16h5",
-      E.uprightBell(41, 16)
-    ),
-    pose(
-      [19, 8],
-      "M18 12l-2 16-6 16m6-16 8 16m-6-28-8 3 15-7",
-      E.cablePost + " M25 12 46 16",
-      E.uprightBell(25, 12)
-    )
-  ],
-  "Dumbbell curls": curlPoses(false),
-  "Hammer curls": curlPoses(true),
-  "Squat": [
-    pose([24, 8], "M24 12l-1 16 4 8-1 8h6 M21 16l6 7 5-9", E.floor, E.bar(24, 14)),
-    pose([28, 19], "M27 23l-9 11 14 2-6 8h6 M26 24l7 6 3-6", E.floor, E.bar(28, 24))
-  ],
-  "Romanian deadlift": [
-    pose([23, 7], "M23 11l-1 16 4 7v10h7 M23 15l5 9 1 6", E.floor, E.bar(29, 30)),
-    pose([38, 20], "M34 22l-14 5 6 7v10h7 M30 24l3 7-1 7", E.floor, E.bar(32, 38))
-  ],
-  "Leg press": [
-    pose([10, 26], "M13 29l11 9 3-14 11 5 4-5 M17 32l8 1", "M6 28l15 13h12m3-9 10-11M26 44 47 21"),
-    pose([10, 26], "M13 29l11 9 9-12 11-10 3-4 M17 32l8 1", "M6 28l15 13h12m8-22 8-8M26 44 47 21")
-  ],
-  "Leg curls": [
-    pose([10, 25], "M14 28l17 3 15 1 1 4 M17 29l3 5h-8", "M8 36h32m-27 0v8m21-8v8", E.uprightBell(44, 33)),
-    pose([10, 25], "M14 28l17 3 7 1 3-13 5 1 M17 29l3 5h-8", "M8 36h32m-27 0v8m21-8v8", E.dumbbell(41, 22))
-  ],
-  "Calf raises": [
-    pose([22, 8], "M22 12l-1 15 3 14h9 M22 17l6 6 7-4", E.calfStep + " M36 10v29"),
-    pose([22, 5], "M22 9l-1 15 3 13 9 4 M22 14l6 6 7-4", E.calfStep + " M36 10v29")
-  ],
-  "Incline treadmill walk": walkPoses(E.treadmill),
-  "Plank": [
-    pose([11, 23], "M15 26l16 5 9 10h7 M17 27l-2 15H6", E.floor),
-    pose([11, 25], "M15 28l14 5 13 7 2 5 M17 29l-2 13H6", E.floor)
-  ],
-  "Hanging knee raises": [
-    pose([25, 18], "M25 22v12l-4 9m4-9 4 9M20 24h10l5-10V5M20 24l-5-10V5", E.topBar),
-    pose([25, 18], "M25 22v12l11-4 2 9m-13-5 8-5 1 8M20 24h10l5-10V5M20 24l-5-10V5", E.topBar)
-  ],
-  "Incline bench press": benchPoses(true, false),
-  "Pull-ups or lat pulldown": [
-    pose([25, 20], "M25 24v11l-4 10m4-10 4 10M19 26h12l5-12V5M19 26l-5-12V5", E.topBar),
-    pose([25, 7], "M25 11v13l-4 11 6 6m-2-17 5 12-7 5M19 14h12l7 4-2-13M19 14l-7 4 2-13", E.topBar)
-  ],
-  "Dumbbell shoulder press": pressPoses(true),
-  "Seated cable row": rowPoses(),
-  "Curls, then tricep pushdowns": [curlPoses(false)[1], pressdown[1]],
-  "Deadlift": [
-    pose([33, 21], "M30 24l-12 9 11 3-3 8h7 M26 26l7 8 2 7", E.floor, E.bar(35, 41)),
-    pose([23, 8], "M23 12l-1 16 5 9v7h6 M23 16l4 9 2 6", E.floor, E.bar(29, 31))
-  ],
-  "Bulgarian split squat": [
-    pose([30, 8], "M29 12l-2 16 11 7-1 9h6m-16-16-9 8-7-3 M29 17l5 10", "M4 34h13v11M4 45h43"),
-    pose([31, 16], "M30 20l-5 15 13 1-1 8h6m-18-9-6 7-8-9 M30 24l5 8", "M4 34h13v11M4 45h43")
-  ],
-  "Leg extensions": [
-    pose([19, 10], "M19 14l2 15 13 2 2 12h6 M20 19l4 8h6", E.chair, E.dumbbell(37, 40)),
-    pose([19, 10], "M19 14l2 15 13 2 11-4 1-4 M20 19l4 8h6", E.chair, E.uprightBell(43, 28))
-  ],
-  "Walk": walkPoses(E.floor),
-  "Full body stretch": [
-    pose([25, 12], "M25 16v15l-9 13m9-13 10 13M19 20h12l4-8 2-7M19 20l-4-8-2-7", E.floor),
-    pose([21, 11], "M22 15l5 16-10 13m10-13 9 13M20 19l-8-6 3-8m5 14 7-7-4-9", E.floor)
-  ]
+FIG_BUILD.neutral = (() => {
+  const mix = (a, b) => Array.isArray(a) ? a.map((item, i) => mix(item, b[i])) : typeof a === "object" ? Object.fromEntries(Object.keys(a).map((key) => [key, mix(a[key], b[key])])) : (a + b) / 2;
+  const build = mix(FIG_BUILD.male, FIG_BUILD.female);
+  build.front = FIG_BUILD.male.front.map(([t, d], i) => [t, i === 2 ? 3.2 : (d + FIG_BUILD.female.front[i][1]) / 2]);
+  return build;
+})();
+
+const FIG = (() => {
+  const RAD = Math.PI / 180;
+  const n2 = (value) => (Math.round(value * 100) / 100).toString();
+  const pt = (p) => n2(p[0]) + " " + n2(p[1]);
+  const add = (p, v, k = 1) => [p[0] + v[0] * k, p[1] + v[1] * k];
+  const lerp = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+  const unit = (a, b) => {
+    const dx = b[0] - a[0], dy = b[1] - a[1], length = Math.hypot(dx, dy) || 1;
+    return [dx / length, dy / length];
+  };
+  const dir = (angle, face = 1) => [Math.sin(angle * RAD) * face, Math.cos(angle * RAD)];
+  const circle = (c, r) => "M" + pt([c[0] - r, c[1]]) + "a" + n2(r) + " " + n2(r) + " 0 1 0 " + n2(2 * r) + " 0a" + n2(r) + " " + n2(r) + " 0 1 0 " + n2(-2 * r) + " 0Z";
+  // A closed smooth outline through the points.
+  const blob = (points) => {
+    const count = points.length;
+    let d = "M" + pt(points[0]);
+    for (let i = 0; i < count; i++) {
+      const p0 = points[(i - 1 + count) % count], p1 = points[i], p2 = points[(i + 1) % count], p3 = points[(i + 2) % count];
+      d += "C" + pt([p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6]) + " " + pt([p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6]) + " " + pt(p2);
+    }
+    return d + "Z";
+  };
+  // A tapered limb from a to b; `fore` and `aft` push the muscle belly out on the front and back.
+  const limb = (a, b, ra, rb, front, fore = 0, aft = 0) => {
+    const along = unit(a, b);
+    const side = front || [-along[1], along[0]];
+    const belly = lerp(a, b, 0.36);
+    return "M" + pt(add(a, side, ra)) + "Q" + pt(add(belly, side, (ra * 0.64 + rb * 0.36) + fore)) + " " + pt(add(b, side, rb)) + "L" + pt(add(b, side, -rb)) + "Q" + pt(add(belly, side, -(ra * 0.64 + rb * 0.36) - aft)) + " " + pt(add(a, side, -ra)) + "Z";
+  };
+  const line = (...points) => "M" + points.map(pt).join("L");
+
+  // ---- side view -------------------------------------------------------------------------------
+  const SIDE_DEFAULT = { face: 1, t: 0, hd: 0, aU: 0, aL: 6, th: 3, sh: -3, ft: 90 };
+  function sideJoints(build, pose) {
+    const p = { ...SIDE_DEFAULT, ...pose };
+    for (const [far, near] of [["a2U", "aU"], ["a2L", "aL"], ["th2", "th"], ["sh2", "sh"], ["ft2", "ft"]]) if (p[far] === void 0) p[far] = p[near];
+    const face = p.face;
+    const up = [Math.sin(p.t * RAD) * face, -Math.cos(p.t * RAD)];
+    const j = { face, up, hip: [p.hip ? p.hip[0] : p.x || 25, p.hip ? p.hip[1] : 26] };
+    j.fwd = [-up[1] * face, up[0] * face];
+    j.shoulder = add(j.hip, up, build.torso);
+    const neckLean = p.t * 0.72 + p.hd;
+    j.neckUp = [Math.sin(neckLean * RAD) * face, -Math.cos(neckLean * RAD)];
+    j.headFwd = [-j.neckUp[1] * face, j.neckUp[0] * face];
+    j.neck = add(add(j.shoulder, up, 0.3), j.neckUp, build.neck);
+    j.head = add(j.neck, j.neckUp, build.head * 0.86);
+    const arm = (upper, lower) => {
+      const elbow = add(j.shoulder, dir(upper, face), build.upper);
+      const wrist = add(elbow, dir(lower, face), build.fore);
+      return { elbow, wrist, hand: add(wrist, dir(lower, face), build.hand * 0.85) };
+    };
+    const leg = (thigh, shin, foot) => {
+      const knee = add(j.hip, dir(thigh, face), build.thigh);
+      const ankle = add(knee, dir(shin, face), build.shin);
+      return { knee, ankle, toe: add(ankle, dir(foot, face), build.foot), heel: add(ankle, dir(foot, face), -1.0) };
+    };
+    j.arm = arm(p.aU, p.aL); j.arm2 = arm(p.a2U, p.a2L);
+    j.leg = leg(p.th, p.sh, p.ft); j.leg2 = leg(p.th2, p.sh2, p.ft2);
+    // Stand on the ground, or hold on to something, by sliding the whole body.
+    let shift = [0, 0];
+    if (p.hold) {
+      const which = { hand: j.arm.hand, toe: j.leg.toe, ankle: j.leg.ankle, ankle2: j.leg2.ankle }[p.hold[0]];
+      shift = [p.hold[1] - which[0], p.hold[2] - which[1]];
+    } else if (p.ground !== void 0) {
+      const lowest = Math.max(...(p.plant === "near" ? [j.leg] : [j.leg, j.leg2]).flatMap((part) => [part.ankle[1] + 1.25, part.toe[1] + 0.85]), ...(p.plant === "elbow" ? [j.arm.elbow[1] + build.arm[1]] : []));
+      shift = [0, p.ground - lowest];
+    }
+    const move = (value) => Array.isArray(value) && typeof value[0] === "number" ? add(value, shift) : value;
+    for (const key of ["hip", "shoulder", "neck", "head"]) j[key] = move(j[key]);
+    for (const part of [j.arm, j.arm2, j.leg, j.leg2]) for (const key of Object.keys(part)) part[key] = move(part[key]);
+    return j;
+  }
+  function sideParts(build, j, sex) {
+    const spine = (t) => add(j.hip, j.up, build.torso * (1 - t));
+    const edge = (list, sign) => list.map(([t, depth]) => add(spine(t), j.fwd, depth * sign));
+    const front = edge(build.front, 1), back = edge(build.back, -1);
+    const depthAt = (list, t) => {
+      for (let i = 1; i < list.length; i++) {
+        const [t0, d0] = list[i - 1], [t1, d1] = list[i];
+        if ((t - t0) * (t - t1) <= 0) return d0 + (d1 - d0) * ((t - t0) / (t1 - t0 || 1));
+      }
+      return list[list.length - 1][1];
+    };
+    const frontAt = (t, pad = 0) => add(spine(t), j.fwd, depthAt(build.front, t) + pad);
+    const backAt = (t, pad = 0) => add(spine(t), j.fwd, -(depthAt(build.back, t) + pad));
+    const parts = [];
+    const push = (cls, d) => parts.push([cls, d]);
+    const armParts = (arm, tone) => {
+      const upperFront = [dirOf(j.shoulder, arm.elbow)[1] * j.face, -dirOf(j.shoulder, arm.elbow)[0] * j.face];
+      const lowerFront = [dirOf(arm.elbow, arm.wrist)[1] * j.face, -dirOf(arm.elbow, arm.wrist)[0] * j.face];
+      push(tone, circle(j.shoulder, build.arm[0] * 1.04));
+      push(tone, limb(j.shoulder, arm.elbow, build.arm[0], build.arm[1], upperFront, build.biceps, build.biceps * 0.7));
+      push(tone, circle(arm.elbow, build.arm[1]));
+      push(tone, limb(arm.elbow, arm.wrist, build.arm[1] * 1.04, build.arm[2], lowerFront, build.biceps * 0.45, 0.1));
+      push(tone, circle(arm.hand, build.hand));
+    };
+    const legParts = (leg, tone, cloth, shoe) => {
+      const thighFront = [dirOf(j.hip, leg.knee)[1] * j.face, -dirOf(j.hip, leg.knee)[0] * j.face];
+      const shinFront = [dirOf(leg.knee, leg.ankle)[1] * j.face, -dirOf(leg.knee, leg.ankle)[0] * j.face];
+      push(tone, limb(j.hip, leg.knee, build.leg[0], build.leg[1], thighFront, build.quad, build.quad * 0.8));
+      push(tone, circle(leg.knee, build.leg[1]));
+      push(tone, limb(leg.knee, leg.ankle, build.leg[1] * 0.98, build.leg[2], shinFront, 0.05, build.calf));
+      const shortEnd = lerp(j.hip, leg.knee, 0.46);
+      push(cloth, limb(j.hip, shortEnd, build.leg[0] + 0.12, build.leg[0] * 0.54 + build.leg[1] * 0.46 + 0.32, thighFront, build.quad * 0.5, build.quad * 0.4));
+      push(shoe, circle(leg.ankle, 1.22));
+      push(shoe, limb(leg.heel, leg.toe, 1.2, 0.86));
+    };
+    armParts(j.arm2, "far");
+    legParts(j.leg2, "far", "cloth far", "shoe far");
+    push("skin", blob([...front, ...back]));
+    if (sex === "male") push("cut", line(frontAt(0.4, -0.25), add(frontAt(0.38), j.fwd, -1.7), add(spine(0.33), j.fwd, 0.4)));
+    if (sex !== "male") push("cloth", blob([frontAt(0.1, 0.08), frontAt(0.27, 0.1), frontAt(0.43, 0.08), spine(0.45), backAt(0.43, 0.08), backAt(0.24, 0.08), backAt(0.1, 0.08), spine(0.08)]));
+    push("cloth", blob([frontAt(0.84, 0.1), frontAt(0.95, 0.12), frontAt(1.08, 0.1), add(spine(1.2), j.fwd, -0.4), backAt(1.1, 0.12), backAt(0.98, 0.12), backAt(0.84, 0.1), spine(0.82)]));
+    push("skin", limb(add(j.shoulder, j.up, -0.4), j.neck, build.neckR * 1.15, build.neckR));
+    const r = build.head;
+    const at = (u, f) => add(add(j.head, j.neckUp, u * r), j.headFwd, f * r);
+    if (sex === "female") push("hair", circle(at(0.74, -1.12), 0.56 * r));
+    push("skin", blob([at(1.0, 0.05), at(0.62, 0.78), at(0.12, 0.98), at(-0.2, 1.24), at(-0.46, 0.95), at(-0.98, 0.74), at(-1.04, 0.22), at(-0.56, -0.42), at(0.1, -0.98), at(0.74, -0.7)]));
+    push("shade", circle(at(-0.08, -0.12), 0.2 * r));
+    push("hair", sex === "female"
+      ? blob([at(0.74, 0.74), at(1.16, 0.02), at(0.86, -0.84), at(0.08, -1.14), at(-0.5, -0.86), at(-0.2, -0.42), at(0.3, 0.1), at(0.48, 0.5)])
+      : blob([at(0.76, 0.7), at(1.13, 0.02), at(0.82, -0.82), at(0.1, -1.08), at(-0.34, -0.74), at(-0.02, -0.4), at(0.36, 0.14), at(0.52, 0.5)]));
+    legParts(j.leg, "skin", "cloth", "shoe");
+    return { parts, arm: () => { const list = []; const keep = parts.length; armParts(j.arm, "skin"); return parts.splice(keep); } };
+  }
+  const dirOf = (a, b) => unit(a, b);
+
+  // ---- front view ------------------------------------------------------------------------------
+  const FRONT_DEFAULT = { lean: 0, aU: 8, aL: 4, th: 4, sh: 0, thighScale: 1 };
+  function frontJoints(build, pose) {
+    const p = { ...FRONT_DEFAULT, ...pose };
+    const w = build.wide;
+    const up = [Math.sin(p.lean * RAD), -Math.cos(p.lean * RAD)];
+    const right = [-up[1], up[0]];
+    const j = { up, right, hip: [p.hip ? p.hip[0] : p.x || 25, p.hip ? p.hip[1] : 26] };
+    j.chest = add(j.hip, up, build.torso);
+    j.neck = add(j.chest, up, build.neck + 0.3);
+    j.head = add(j.neck, up, build.head * 0.86);
+    const side = (sign) => {
+      const shoulder = add(add(j.chest, right, sign * (w.shoulder - build.arm[0] * 0.75)), up, -0.9);
+      const out = (angle) => [Math.sin(angle * RAD) * sign, Math.cos(angle * RAD)];
+      const elbow = add(shoulder, out(p.aU), build.upper);
+      const wrist = add(elbow, out(p.aL), build.fore);
+      const hipJoint = add(j.hip, right, sign * w.joint);
+      const knee = add(hipJoint, out(p.th), build.thigh * p.thighScale);
+      const ankle = add(knee, out(p.sh), build.shin);
+      return { sign, shoulder, elbow, wrist, hand: add(wrist, out(p.aL), build.hand * 0.85), hipJoint, knee, ankle, toe: add(ankle, [sign * 0.9, 0.55], 1.6) };
+    };
+    j.L = side(-1); j.R = side(1);
+    let shift = [0, 0];
+    if (p.hold) shift = [p.hold[1] - (j.L.hand[0] + j.R.hand[0]) / 2, p.hold[2] - (j.L.hand[1] + j.R.hand[1]) / 2];
+    else if (p.ground !== void 0) shift = [0, p.ground - Math.max(j.L.ankle[1], j.R.ankle[1]) - 1.5];
+    for (const key of ["hip", "chest", "neck", "head"]) j[key] = add(j[key], shift);
+    for (const part of [j.L, j.R]) for (const key of Object.keys(part)) if (Array.isArray(part[key])) part[key] = add(part[key], shift);
+    return j;
+  }
+  function frontParts(build, j, sex) {
+    const w = build.wide;
+    const at = (t, half) => [add(add(j.hip, j.up, build.torso * (1 - t)), j.right, -half), add(add(j.hip, j.up, build.torso * (1 - t)), j.right, half)];
+    const parts = [];
+    const push = (cls, d) => parts.push([cls, d]);
+    for (const leg of [j.L, j.R]) {
+      push("skin", limb(leg.hipJoint, leg.knee, build.leg[0], build.leg[1], null, build.quad * 0.5, build.quad * 0.5));
+      push("skin", circle(leg.knee, build.leg[1]));
+      push("skin", limb(leg.knee, leg.ankle, build.leg[1] * 0.98, build.leg[2], null, build.calf * 0.6, build.calf * 0.6));
+      push("cloth", limb(leg.hipJoint, lerp(leg.hipJoint, leg.knee, 0.46), build.leg[0] + 0.12, build.leg[0] * 0.54 + build.leg[1] * 0.46 + 0.32, null, 0.2, 0.2));
+      push("shoe", circle(leg.ankle, 1.2));
+      push("shoe", limb(leg.ankle, leg.toe, 1.15, 0.95));
+    }
+    const rows = [[-0.02, build.neckR + 0.4], [0.07, w.shoulder - 0.5], [0.3, w.chest], [0.66, w.waist], [0.95, w.hip], [1.12, w.hip * 0.72]];
+    const left = rows.map(([t, half]) => at(t, half)[0]), right = rows.map(([t, half]) => at(t, half)[1]);
+    push("skin", blob([...left, add(j.hip, j.up, -build.torso * 0.26), ...right.reverse()]));
+    if (sex === "male") {
+      const mid = (t) => add(j.hip, j.up, build.torso * (1 - t));
+      push("cut", line(at(0.36, w.chest - 0.7)[0], add(mid(0.4), j.right, -w.chest * 0.45), mid(0.36), add(mid(0.4), j.right, w.chest * 0.45), at(0.36, w.chest - 0.7)[1]));
+      push("cut", line(mid(0.42), mid(0.8)));
+      push("cut", line(at(0.55, 1.6)[0], at(0.55, 1.6)[1]));
+      push("cut", line(at(0.68, 1.5)[0], at(0.68, 1.5)[1]));
+    } else {
+      push("cloth", blob([at(0.12, w.shoulder * 0.55)[0], at(0.3, w.chest + 0.08)[0], at(0.45, w.chest * 0.92)[0], at(0.47, 0)[0], at(0.45, w.chest * 0.92)[1], at(0.3, w.chest + 0.08)[1], at(0.12, w.shoulder * 0.55)[1], at(0.2, 0)[0]]));
+    }
+    push("cloth", blob([at(0.86, w.waist * 0.55 + w.hip * 0.45 + 0.1)[0], at(0.97, w.hip + 0.12)[0], at(1.12, w.hip * 0.78)[0], add(j.hip, j.up, -build.torso * 0.27), at(1.12, w.hip * 0.78)[1], at(0.97, w.hip + 0.12)[1], at(0.86, w.waist * 0.55 + w.hip * 0.45 + 0.1)[1], at(0.84, 0)[0]]));
+    push("skin", limb(add(j.chest, j.up, -0.3), j.neck, build.neckR * 1.2, build.neckR));
+    const r = build.head;
+    const face = (u, x) => add(add(j.head, j.up, u * r), j.right, x * r);
+    if (sex === "female") {
+      push("hair", circle(face(1.28, 0), 0.5 * r));
+      push("hair", blob([face(1.12, 0), face(0.7, 0.98), face(-0.2, 1.12), face(-0.72, 0.86), face(-0.5, 0), face(-0.72, -0.86), face(-0.2, -1.12), face(0.7, -0.98)]));
+    }
+    push("skin", blob([face(1.0, 0), face(0.6, 0.82), face(-0.1, 0.9), face(-0.72, 0.62), face(-1.08, 0), face(-0.72, -0.62), face(-0.1, -0.9), face(0.6, -0.82)]));
+    push("hair", blob([face(0.1, -0.96), face(0.82, -0.84), face(1.16, 0), face(0.82, 0.84), face(0.1, 0.96), face(0.52, 0.62), face(sex === "female" ? 0.56 : 0.68, 0), face(0.52, -0.62)]));
+    const arms = [];
+    for (const arm of [j.L, j.R]) {
+      arms.push(["skin", circle(arm.shoulder, build.arm[0] * 1.08)]);
+      arms.push(["skin", limb(arm.shoulder, arm.elbow, build.arm[0], build.arm[1], null, build.biceps * 0.6, build.biceps * 0.6)]);
+      arms.push(["skin", circle(arm.elbow, build.arm[1])]);
+      arms.push(["skin", limb(arm.elbow, arm.wrist, build.arm[1] * 1.04, build.arm[2], null, 0.15, 0.15)]);
+      arms.push(["skin", circle(arm.hand, build.hand)]);
+    }
+    return { parts, arm: () => arms };
+  }
+
+  // ---- things held or pushed ---------------------------------------------------------------------
+  const plate = (c, r = 3.3) => [["iron", circle(c, r)], ["iron hub", circle(c, r * 0.3)]];
+  const sideBell = (c, along = [1, 0]) => {
+    const a = add(c, along, -1.9), b = add(c, along, 1.9);
+    return [["iron", limb(add(a, along, -0.7), add(a, along, 0.7), 1.35, 1.35)], ["iron", limb(add(b, along, -0.7), add(b, along, 0.7), 1.35, 1.35)], ["bar", line(a, b)]];
+  };
+  const frontBar = (l, r, plates = true) => {
+    const along = unit(l, r);
+    const a = add(l, along, -5.2), b = add(r, along, 5.2);
+    const list = [["bar", line(a, b)]];
+    if (plates) for (const end of [a, b]) list.push(["iron", limb(add(end, along, -0.75), add(end, along, 0.75), 3.0, 3.0)]);
+    return list;
+  };
+  const HELD = {
+    plate: (j) => plate(j.arm.hand),
+    backPlate: (j) => plate(j.arm.hand, 2.7),
+    bell: (j) => sideBell(j.arm.hand, [1, 0]),
+    hammer: (j) => sideBell(j.arm.hand, dirOf(j.arm.elbow, j.arm.wrist)),
+    bells: (j) => [...sideBell(j.arm2.hand, [1, 0]).map(([cls, d]) => [cls + " far", d]), ...sideBell(j.arm.hand, [1, 0])],
+    roller: (j) => [["iron", circle(add(j.leg.ankle, dirOf(j.leg.knee, j.leg.ankle), -0.2), 1.7)]],
+    frontBar: (j) => frontBar(j.L.hand, j.R.hand),
+    pullBar: (j) => frontBar(j.L.hand, j.R.hand, false),
+    frontBells: (j) => [...sideBell(j.L.hand, [1, 0]), ...sideBell(j.R.hand, [1, 0])]
+  };
+
+  function frame(rig, pose, sex) {
+    const build = FIG_BUILD[sex] || FIG_BUILD.neutral;
+    const front = rig.view === "front";
+    const j = front ? frontJoints(build, pose) : sideJoints(build, pose);
+    const body = front ? frontParts(build, j, sex) : sideParts(build, j, sex);
+    const held = rig.held ? HELD[rig.held](j) : [];
+    const moving = rig.moving ? rig.moving(j).map((d) => ["gear", d]) : [];
+    const arm = body.arm();
+    // The near arm goes over the weight, except a bar across the back or a bar the hands hang from.
+    return rig.heldOver ? [...moving, ...body.parts, ...arm, ...held] : [...moving, ...body.parts, ...held, ...arm];
+  }
+  const ease = (t) => t * t * (3 - 2 * t);
+  const blend = (a, b, t) => {
+    const out = {};
+    for (const key of new Set([...Object.keys(a), ...Object.keys(b)])) {
+      const from = a[key] === void 0 ? b[key] : a[key], to = b[key] === void 0 ? a[key] : b[key];
+      out[key] = typeof from === "number" ? from + (to - from) * t : Array.isArray(from) ? from.map((value, i) => typeof value === "number" ? value + (to[i] - value) * t : value) : from;
+    }
+    return out;
+  };
+  const STEPS = 6;
+  const TIMES = (() => {
+    const list = [0, 0.26];
+    for (let i = 1; i <= STEPS; i++) list.push(0.26 + 0.24 * i / STEPS);
+    list.push(0.76);
+    for (let i = 1; i <= STEPS; i++) list.push(0.76 + 0.24 * i / STEPS);
+    return list.map(n2).join(";");
+  })();
+
+  /** SVG markup for one exercise. `still` draws only the starting position; `box` is the part of the drawing to show. */
+  function draw(rig, sex, still, box = "-2 -2 54 52") {
+    const gear = rig.gear ? '<path class="gear" d="' + rig.gear + '"/>' : "";
+    const frames = [];
+    for (let i = 0; i <= (still ? 0 : STEPS); i++) frames.push(frame(rig, blend(rig.a, rig.b, ease(i / STEPS)), sex));
+    const first = frames[0];
+    let body = "";
+    for (let part = 0; part < first.length; part++) {
+      const [cls, d] = first[part];
+      if (still) { body += '<path class="' + cls + '" d="' + d + '"/>'; continue; }
+      const there = frames.map((list) => list[part][1]);
+      const values = [there[0], ...there, there[STEPS], ...there.slice(0, STEPS).reverse()].join(";");
+      body += '<path class="' + cls + '" d="' + d + '"><animate attributeName="d" dur="' + (rig.dur || 2.8) + 's" repeatCount="indefinite" keyTimes="' + TIMES + '" values="' + values + '"/></path>';
+    }
+    return '<svg class="figure" viewBox="' + box + '" aria-hidden="true">' + gear + body + "</svg>";
+  }
+  return { draw, line, circle };
+})();
+
+const GEAR = {
+  floor: "M3 45.6h44",
+  flatBench: "M7 34.6h30M12 34.6v10.4m20-10.4v10.4",
+  inclineBench: "M9.5 17 28 36.4h11M28 36.4v8.6m9-8.6v8.6",
+  seat: "M9 33.6h14M16 33.6v11.4",
+  post: "M47 4v41.6m-5 0h8",
+  topBar: "M8 2.2h34",
+  rack: "M40 12v33.6m-4 0h8",
+  step: "M22 45.6h22v-4H22Z",
+  lowBench: "M3 33.4h13v12.2",
+  treadmill: "M4 45.6h42v-2H4ZM45 43.6V24h-8",
+  proneBench: "M8 36.4h30M13 36.4v8.6m20-8.6v8.6",
+  pressSled: "M3 29 19 43.4h10"
 };
+const cableTo = (from, grip = "arm") => (j) => [FIG.line(from, j[grip].hand)];
+
+// Every drawing: where it is seen from, the two ends of the movement, and what is held.
+const RIGS = (() => {
+  const stand = { ground: 45, x: 24 };
+  const bench = (incline, held) => {
+    const lying = incline ? { hip: [30.5, 32.6], t: -46, hd: 30 } : { hip: [30, 31.4], t: -90, hd: 0 };
+    const legs = { th: incline ? 82 : 76, sh: 4, th2: incline ? 76 : 70, sh2: 8 };
+    return {
+      gear: (incline ? GEAR.inclineBench : GEAR.flatBench) + GEAR.floor, held,
+      a: { ...lying, ...legs, aU: incline ? 20 : 62, aL: incline ? 136 : 180, a2U: incline ? 26 : 68, a2L: incline ? 140 : 180 },
+      b: { ...lying, ...legs, aU: incline ? 132 : 176, aL: incline ? 136 : 180, a2U: incline ? 136 : 178, a2L: incline ? 140 : 180 }
+    };
+  };
+  const press = (seated) => ({
+    view: "front", gear: seated ? "M17 36.4h16M25 36.4v9.2" + GEAR.floor : GEAR.floor, held: seated ? "frontBells" : "frontBar",
+    a: seated ? { hip: [25, 33.4], th: 50, sh: 0, thighScale: 0.55, aU: 62, aL: 178 } : { x: 25, ground: 45, aU: 52, aL: 178 },
+    b: seated ? { hip: [25, 33.4], th: 50, sh: 0, thighScale: 0.55, aU: 158, aL: 178 } : { x: 25, ground: 45, aU: 160, aL: 180 }
+  });
+  const curl = (held) => ({
+    gear: GEAR.floor, held,
+    a: { ...stand, aU: 2, aL: 10, a2U: -3, a2L: 6 },
+    b: { ...stand, aU: 8, aL: 152, a2U: -3, a2L: 6 }
+  });
+  const row = () => ({
+    gear: GEAR.seat + "M39 31 43 45.6" + GEAR.post, held: null, moving: cableTo([47, 22]),
+    a: { hip: [17, 30.6], t: 6, th: 78, sh: 52, ft: 150, aU: 70, aL: 86 },
+    b: { hip: [17, 30.6], t: -6, th: 78, sh: 52, ft: 150, aU: -42, aL: 82 }
+  });
+  const walk = (ground, gear) => ({
+    gear, dur: 1.7,
+    a: { x: 25, ground, t: 5, th: 26, sh: 6, th2: -22, sh2: -44, ft2: 60, aU: -26, aL: 12, a2U: 30, a2L: 76 },
+    b: { x: 25, ground, t: 5, th: -22, sh: -44, ft: 60, th2: 26, sh2: 6, aU: 30, aL: 76, a2U: -26, a2L: 12 }
+  });
+  const pushdown = {
+    gear: GEAR.floor + GEAR.post, moving: cableTo([47, 6]),
+    a: { ...stand, x: 26, t: 8, aU: 8, aL: 112 },
+    b: { ...stand, x: 26, t: 8, aU: 6, aL: 14 }
+  };
+  const rigs = {
+    "Bench press": bench(false, "plate"),
+    "Incline bench press": bench(true, "plate"),
+    "Incline dumbbell press": bench(true, "bell"),
+    "Shoulder press": press(false),
+    "Dumbbell shoulder press": press(true),
+    "Lateral raises": { view: "front", gear: GEAR.floor, held: "frontBells", a: { x: 25, ground: 45, aU: 7, aL: 4 }, b: { x: 25, ground: 45, aU: 84, aL: 82 } },
+    "Tricep pushdowns": pushdown,
+    "Lat pulldown": {
+      view: "front", gear: "M15 37.4h20M25 37.4v8.2" + GEAR.floor, held: "frontBar", heldOver: true,
+      moving: (j) => [FIG.line([25, 0], [(j.L.hand[0] + j.R.hand[0]) / 2, (j.L.hand[1] + j.R.hand[1]) / 2])],
+      a: { hip: [25, 34.2], th: 52, sh: 0, thighScale: 0.55, aU: 152, aL: 172 },
+      b: { hip: [25, 34.2], th: 52, sh: 0, thighScale: 0.55, aU: 62, aL: 176 }
+    },
+    "Cable row": row(),
+    "Seated cable row": row(),
+    "Face pulls": {
+      gear: GEAR.floor + GEAR.post, moving: cableTo([47, 15]),
+      a: { ...stand, x: 20, t: -4, aU: 92, aL: 96 },
+      b: { ...stand, x: 20, t: -8, aU: -62, aL: 150 }
+    },
+    "Dumbbell curls": curl("bell"),
+    "Hammer curls": curl("hammer"),
+    "Curls, then tricep pushdowns": curl("bell"),
+    "Squat": {
+      gear: GEAR.floor + GEAR.rack, held: "backPlate", heldOver: true,
+      a: { ...stand, x: 23, t: 4, th: 4, sh: -3, aU: -16, aL: 181 },
+      b: { ...stand, x: 19, t: 36, th: 84, sh: -26, aU: -48, aL: 149 }
+    },
+    "Romanian deadlift": {
+      gear: GEAR.floor, held: "plate",
+      a: { ...stand, x: 23, t: 3, th: 3, sh: -2, aU: 2, aL: 3 },
+      b: { ...stand, x: 19, t: 72, th: 20, sh: -4, aU: 0, aL: 0 }
+    },
+    "Deadlift": {
+      gear: GEAR.floor, held: "plate",
+      a: { ...stand, x: 19, t: 56, th: 62, sh: -14, aU: -2, aL: 0 },
+      b: { ...stand, x: 23, t: 3, th: 3, sh: -2, aU: 2, aL: 3 }
+    },
+    "Leg press": {
+      gear: GEAR.pressSled + "M26 45.6 48 21",
+      moving: (j) => [FIG.line(add2(j.leg.heel, [-2.6, -2.4]), add2(j.leg.toe, [2.0, 1.9]))],
+      a: { hip: [21.5, 37], t: -48, hd: 20, th: 148, sh: 96, ft: 190, aU: 30, aL: 60 },
+      b: { hip: [21.5, 37], t: -48, hd: 20, th: 122, sh: 120, ft: 196, aU: 30, aL: 60 }
+    },
+    "Leg curls": {
+      gear: GEAR.proneBench + GEAR.floor, held: "roller",
+      a: { face: -1, hip: [27, 33.4], t: 90, hd: -34, th: -90, sh: -92, ft: -60, aU: 16, aL: -64 },
+      b: { face: -1, hip: [27, 33.4], t: 90, hd: -34, th: -90, sh: -196, ft: -160, aU: 16, aL: -64 }
+    },
+    "Leg extensions": {
+      gear: "M11 31.4h13M17 31.4v14.2M11 31.4 9 16" + GEAR.floor, held: "roller",
+      a: { hip: [16.5, 28.3], t: -9, th: 88, sh: 4, ft: 96, aU: 12, aL: 34 },
+      b: { hip: [16.5, 28.3], t: -9, th: 88, sh: 82, ft: 170, aU: 12, aL: 34 }
+    },
+    "Calf raises": {
+      gear: GEAR.step + GEAR.rack.replace("M40", "M38").replace("m-4 0h8", ""),
+      a: { hold: ["toe", 27.5, 40.9], t: 3, th: 3, sh: -3, ft: 104, aU: 46, aL: 98 },
+      b: { hold: ["toe", 27.5, 40.9], t: 3, th: 3, sh: -3, ft: 48, aU: 54, aL: 104 }
+    },
+    "Incline treadmill walk": walk(43.6, GEAR.treadmill),
+    "Walk": walk(45, GEAR.floor),
+    "Plank": {
+      gear: GEAR.floor, dur: 3.6,
+      a: { face: -1, x: 29, ground: 45, plant: "elbow", t: 78, hd: -16, th: -78, sh: -78, ft: 0, aU: 0, aL: 90 },
+      b: { face: -1, x: 29, ground: 45, plant: "elbow", t: 75, hd: -16, th: -80, sh: -79, ft: 0, aU: 0, aL: 90 }
+    },
+    "Hanging knee raises": {
+      gear: GEAR.topBar,
+      a: { hold: ["hand", 25, 3.2], t: 0, aU: 180, aL: 180, th: 10, sh: -22, ft: 50 },
+      b: { hold: ["hand", 25, 3.2], t: -10, aU: 180, aL: 180, th: 98, sh: -8, ft: 70 }
+    },
+    "Pull-ups or lat pulldown": {
+      view: "front", gear: GEAR.topBar, heldOver: true,
+      a: { hold: ["hands", 25, 3.4], aU: 164, aL: 176, th: 5, sh: 0 },
+      b: { hold: ["hands", 25, 3.4], aU: 70, aL: 178, th: 5, sh: 0 }
+    },
+    "Bulgarian split squat": {
+      gear: GEAR.lowBench + GEAR.floor, held: "bells",
+      a: { x: 28, ground: 45, plant: "near", t: 8, th: 14, sh: -6, th2: -34, sh2: -104, ft2: -170, aU: 2, aL: 4, a2U: -2, a2L: 2 },
+      b: { x: 28, ground: 45, plant: "near", t: 16, th: 74, sh: -12, th2: -6, sh2: -98, ft2: -170, aU: -6, aL: -2, a2U: -10, a2L: -4 }
+    },
+    "Full body stretch": {
+      gear: GEAR.floor, dur: 4.2,
+      a: { ...stand, x: 22, t: -3, aU: 178, aL: 180, a2U: 174, a2L: 178 },
+      b: { ...stand, x: 20, t: 96, hd: 10, th: 8, sh: -3, aU: 4, aL: 2, a2U: 0, a2L: 0 }
+    }
+  };
+  return rigs;
+})();
+function add2(p, v) { return [p[0] + v[0], p[1] + v[1]]; }
 function exerciseArt(name) {
-  const [from, to] = artByExercise[name];
-  return '<svg class="figure" viewBox="-2 -2 54 52" aria-hidden="true" stroke="currentColor" fill="none" stroke-width="3.1" stroke-linecap="round" stroke-linejoin="round">\n    <g class="pose-a">'.concat(from, '</g><g class="pose-b">').concat(to, "</g>\n  </svg>");
+  const rig = RIGS[name] || RIGS.Walk;
+  const still = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  return FIG.draw(rig, bodySex(), still);
 }
+// ---- body and goal ---------------------------------------------------------------------------------
+const GOAL_PLAN = {
+  gain: {
+    label: "Build muscle",
+    about: "Sets of 8 to 15, stopping a little short of failure. This is the muscle-building (hypertrophy) setup.",
+    lift: "Goal: build muscle. Pick a weight that leaves about 2 reps in the tank and rest 60 to 90 seconds between sets.",
+    easy: "Goal: build muscle. Easy days are for recovery, so keep the pace relaxed."
+  },
+  strength: {
+    label: "Get stronger",
+    about: "Heavier sets of 5 or 6 with one extra set on the big lifts, and longer rests between them.",
+    lift: "Goal: get stronger. The big lifts are heavy sets of 5 or 6 with one extra set. Rest 2 to 3 minutes on those and about a minute on everything else.",
+    easy: "Goal: get stronger. Easy days are for recovery, so you are fresh for the heavy lifts."
+  },
+  lose: {
+    label: "Lose fat",
+    about: "The same lifting, so you keep your muscle, with walks that are 10 minutes longer. The fat comes off by eating a little under your calories.",
+    lift: "Goal: lose fat. Lift just as heavy as you would to build muscle, so you keep the muscle you have. The fat comes off through your calories.",
+    easy: "Goal: lose fat. Walks are 10 minutes longer. Keep a pace where you can still talk."
+  },
+  recomp: {
+    label: "Lose fat and build muscle",
+    about: "Muscle-building sets with protein kept high and calories close to what you burn.",
+    lift: "Goal: lose fat and build muscle. Train exactly as you would to build muscle and hit your protein every day.",
+    easy: "Goal: lose fat and build muscle. An easy day still counts: do the walk."
+  },
+  maintain: {
+    label: "Stay in shape",
+    about: "The plan as written, at weights you already handle well.",
+    lift: "Goal: stay in shape. Do the listed sets at weights you handle well. There is no need to push to your limit.",
+    easy: "Goal: stay in shape. Keep it easy today."
+  }
+};
+function lookNow() {
+  return state.settings.profile;
+}
+function saveLook(next) {
+  return commit({ ...state, settings: { ...state.settings, profile: cleanProfile({ ...state.settings.profile, ...next }) } });
+}
+/*END-LOOK-STORE*/
+function bodySex() {
+  const sex = lookNow().sex;
+  return sex === "male" || sex === "female" ? sex : "neutral";
+}
+function trainingGoal() {
+  const goal = lookNow().goal;
+  return has(GOAL_PLAN, goal) ? goal : "";
+}
+const BODY_PREVIEW = { view: "front", a: { x: 25, ground: 46.5, aU: 9, aL: 5 }, b: { x: 25, ground: 46.5, aU: 9, aL: 5 } };
+for (const holder of document.querySelectorAll("[data-body-art]")) holder.innerHTML = FIG.draw(BODY_PREVIEW, holder.dataset.bodyArt, true, "10 3 30 46");
+function pickedSex(name) {
+  const input = document.querySelector('input[name="' + name + '"]:checked');
+  return input ? input.value : "";
+}
+function showPicked(name, sex) {
+  for (const input of document.querySelectorAll('input[name="' + name + '"]')) {
+    input.checked = input.value === sex;
+    input.closest(".body-card").classList.toggle("is-picked", input.checked);
+  }
+}
+document.addEventListener("change", (event) => {
+  const input = event.target;
+  if (input && input.matches && input.matches(".body-card input")) showPicked(input.name, input.value);
+});
+function syncLook() {
+  showPicked("look-sex", lookNow().sex);
+  $("look-goal").value = trainingGoal();
+  $("look-goal-note").textContent = trainingGoal() ? GOAL_PLAN[trainingGoal()].about : "Choose a goal and the sets, reps and walks adjust to it.";
+}
+$("look-card").addEventListener("change", () => {
+  const saved = saveLook({ sex: pickedSex("look-sex"), goal: $("look-goal").value });
+  renderAll();
+  announce("look-message", saved ? "Saved." : "Updated for this session.", saved ? "ok" : "warn");
+});
 const PHASES = [
   { name: "Base", sets: 2, tip: "Keep 3–4 reps in reserve and practice the movement." },
   { name: "Build", sets: 3, tip: "Keep about 2 reps in reserve." },
@@ -3438,17 +3846,29 @@ function phaseFor(date) {
   const week = Math.max(1, Math.floor(days / 7) + 1);
   return { week, index: (week - 1) % 4, upcoming: days < 0 };
 }
-function setPrescription(value, index) {
+const HEAVY_LIFTS = new Set(["Bench press", "Incline bench press", "Shoulder press", "Squat", "Deadlift", "Romanian deadlift", "Pull-ups or lat pulldown"]);
+// Timed work: walks get 10 more minutes when the goal is fat loss.
+function easyPrescription(value, name) {
+  const minutes = value.match(/^(\d+) min$/);
+  return minutes && trainingGoal() === "lose" && /walk/i.test(name || "") ? +minutes[1] + 10 + " min" : value;
+}
+function setPrescription(value, index, name) {
   const match = value.match(/^(\d+) x (.+)$/);
-  if (!match) return value;
+  if (!match) return easyPrescription(value, name);
   const originalSets = +match[1];
-  const sets = index === 3 ? Math.max(1, originalSets - 1) : Math.min(originalSets, PHASES[index].sets);
-  return sets + " × " + match[2];
+  let sets = index === 3 ? Math.max(1, originalSets - 1) : Math.min(originalSets, PHASES[index].sets);
+  let reps = match[2];
+  if (trainingGoal() === "strength" && HEAVY_LIFTS.has(name)) {
+    if (index !== 3) sets += 1;
+    reps = reps.replace(/^\d+/, (count) => +count >= 10 ? 6 : Math.min(+count, 5));
+  }
+  return sets + " × " + reps;
 }
 function weekText(phase) {
   return phase ? "Week " + phase.week : "Set your start date in Settings";
 }
 function renderGym() {
+  syncLook();
   const monday = weekStart(clock.date);
   const todayPhase = phaseFor(clock.date);
   const phase = phaseFor(gymDate);
@@ -3467,9 +3887,10 @@ function renderGym() {
   $("workout-focus").textContent = workout.m;
   $("workout-phase").textContent = (phase ? "Week " + phase.week + " · " : "") + PHASES[index].name;
   $("workout-phase").className = "badge " + (index === 3 ? "green" : "blue");
+  $("workout-goal").textContent = trainingGoal() ? GOAL_PLAN[trainingGoal()][workout.e ? "lift" : "easy"] : "Choose your goal under More, then Settings, and the sets and reps adjust to it.";
   $("exercise-list").innerHTML = workout.x.map(([name, reps], row) => {
     const search = encodeURIComponent("how to do " + name + " proper form");
-    return '<div class="exercise"><button class="art" type="button" data-exercise-art="'.concat(row, '" aria-expanded="false" aria-label="Expand ').concat(name, ' illustration">\n      ').concat(exerciseArt(name), '<svg class="icon expand-mark" aria-hidden="true"><use href="#icon-expand"></use></svg></button>\n      <div class="copy"><strong>').concat(name, '</strong><span class="caption">').concat(setPrescription(reps, index), '</span></div>\n      <a class="btn watch" href="https://www.youtube.com/results?search_query=').concat(search, '" target="_blank" rel="noopener noreferrer" aria-label="Watch ').concat(name, '">').concat(icon("play"), "Watch</a></div>");
+    return '<div class="exercise"><button class="art" type="button" data-exercise-art="'.concat(row, '" aria-expanded="false" aria-label="Expand ').concat(name, ' illustration">\n      ').concat(exerciseArt(name), '<svg class="icon expand-mark" aria-hidden="true"><use href="#icon-expand"></use></svg></button>\n      <div class="copy"><strong>').concat(name, '</strong><span class="caption">').concat(setPrescription(reps, index, name), '</span></div>\n      <a class="btn watch" href="https://www.youtube.com/results?search_query=').concat(search, '" target="_blank" rel="noopener noreferrer" aria-label="Watch ').concat(name, '">').concat(icon("play"), "Watch</a></div>");
   }).join("");
   $("cycle-table").innerHTML = '<ol class="phases">'.concat(PHASES.map((item, i) => "<li".concat(i === index ? ' class="phase-current"' : "", "><b>").concat(i + 1, '</b><span class="copy"><strong>').concat(item.name, '</strong><small class="caption">').concat(item.tip, '</small></span><span class="sets">').concat(item.sets, " sets</span></li>")).join(""), "</ol>");
 }
@@ -3674,11 +4095,9 @@ function syncSettings() {
   $("settings-start").value = start || clock.date;
   $("settings-gym").value = gym;
   const profile = state.settings.profile;
-  $("profile-sex").value = profile.sex;
   $("profile-age").value = profile.age;
   $("profile-feet").value = profile.heightIn === "" ? "" : Math.floor(profile.heightIn / 12);
   $("profile-inches").value = profile.heightIn === "" ? "" : Math.round(profile.heightIn % 12);
-  $("profile-goal").value = profile.goal;
   $("profile-notes").value = profile.notes;
 }
 const PLAN_PICKS = ["g_chick", "g_tuna", "g_whey", "g_yog", "g_cottage", "g_egg", "g_steak", "g_milkw"];
@@ -3697,11 +4116,12 @@ function profileFrom(prefix) {
   const feet = wholeIn(prefix + "-feet", 3, 8);
   const inches = wholeIn(prefix + "-inches", 0, 11);
   const age = wholeIn(prefix + "-age", 13, 100);
+  const current = state.settings.profile;
   return cleanProfile({
-    sex: $(prefix + "-sex").value,
+    sex: prefix === "setup" ? pickedSex("setup-sex") : current.sex,
     age: age === null ? "" : age,
     heightIn: feet === null ? "" : feet * 12 + (inches || 0),
-    goal: $(prefix + "-goal").value,
+    goal: prefix === "setup" ? $("setup-goal").value : current.goal,
     notes: prefix === "profile" ? $("profile-notes").value.trim() : state.settings.profile.notes
   });
 }
@@ -3710,8 +4130,8 @@ function suggestGoals(profile, lb) {
   const kg = lb * 0.45359237;
   const cm = profile.heightIn * 2.54;
   const resting = 10 * kg + 6.25 * cm - 5 * profile.age + (profile.sex === "male" ? 5 : profile.sex === "female" ? -161 : -78);
-  const shift = { gain: 300, lose: -400, recomp: 0, maintain: 0 }[profile.goal] || 0;
-  const perLb = { gain: 0.8, lose: 1, recomp: 0.9, maintain: 0.7 }[profile.goal] || 0.8;
+  const shift = { gain: 300, strength: 250, lose: -400, recomp: 0, maintain: 0 }[profile.goal] || 0;
+  const perLb = { gain: 0.8, strength: 0.8, lose: 1, recomp: 0.9, maintain: 0.7 }[profile.goal] || 0.8;
   return { calories: Math.max(1200, Math.round((resting * 1.55 + shift) / 50) * 50), protein: Math.round(lb * perLb / 5) * 5 };
 }
 $("setup-suggest").addEventListener("click", () => {
@@ -3739,9 +4159,7 @@ $("setup-form").addEventListener("submit", (event) => {
     announce("setup-message", "Enter calories, protein, a start date and a gym time.", "warn");
     return;
   }
-  const helper = profileFrom("setup");
-  const used = $("setup-helper").open || helper.age !== "" || helper.heightIn !== "" || helper.sex !== "";
-  if (used) settings.profile = { ...helper, goal: helper.age !== "" || helper.heightIn !== "" ? helper.goal : "" };
+  settings.profile = profileFrom("setup");
   const lb = Number($("setup-weight").value);
   const weights = $("setup-weight").value.trim() !== "" && validWeight(lb) ? { ...state.weights, [clock.date]: lb } : state.weights;
   commit({ ...state, settings, weights });
@@ -4079,6 +4497,7 @@ function aiContext() {
     "LIVE DATA FROM THE APP",
     "Now: " + longDate.format(calendarMs(clock.date)) + ", " + formatTime(clock.minute) + " local time (" + ZONE + ").",
     "Daily goals: " + fmt(calories) + " calories, " + protein + " g protein.",
+    "Training goal chosen in the app: " + (trainingGoal() ? GOAL_PLAN[trainingGoal()].label : "not chosen") + ".",
     "Today so far: " + fmt(total.calories) + " cal, " + grams(total.protein) + " protein, " + grams(total.carbs) + " carbs, " + grams(total.fat) + " fat. Left: " + fmt(calories - total.calories) + " cal, " + grams(protein - total.protein) + " protein."
   ];
   for (const [id, name] of MEALS) {
@@ -4104,7 +4523,7 @@ function aiContext() {
   const weeks = weeklyWeights(weights).slice(0, 5).reverse();
   if (weeks.length) lines.push("Weekly average weight: " + weeks.map((week) => monthDay.format(calendarMs(week.date)) + " " + week.average.toFixed(1)).join(" -> ") + " lb.");
   lines.push("Training plan: 4-week repeating cycle (Base, Build, Heavy, Lighter). " + (phase && !phase.upcoming ? "They are in week " + phase.week + ", the " + PHASES[index].name + " week: " + PHASES[index].tip : "Start date not set yet.") + " Usual gym time " + formatTime(times.gym) + ".");
-  for (const day of G) lines.push("  " + day.d + " " + day.n + " (" + day.m + "): " + day.x.map(([name, sets]) => name + " " + (day.e ? setPrescription(sets, index) : sets)).join(", "));
+  for (const day of G) lines.push("  " + day.d + " " + day.n + " (" + day.m + "): " + day.x.map(([name, sets]) => name + " " + (day.e ? setPrescription(sets, index, name) : easyPrescription(sets, name))).join(", "));
   lines.push("Today is " + G[dayIndex(clock.date)].d + " (" + G[dayIndex(clock.date)].n + ").");
   lines.push("Supplements: " + (supplementLine() || "none entered") + ". Checked off today: " + (state.settings.pills.filter((pill) => today.pills[pill.id]).map((pill) => pill.name).join(", ") || "none") + ".");
   const combos = Object.values(state.combos);
@@ -4582,7 +5001,7 @@ function answerWorkout(question) {
   const when = date === clock.date ? "Today" : date === shiftDate(clock.date, 1) ? "Tomorrow" : longDate.format(calendarMs(date));
   const blocks = [
     when + " is " + workout.n + " (" + workout.m.toLowerCase() + ")" + (phase && !phase.upcoming ? ", week " + phase.week + ", the " + PHASES[index].name.toLowerCase() + " week." : "."),
-    workout.x.map(([name, sets]) => name + ": " + (workout.e ? setPrescription(sets, index) : sets))
+    workout.x.map(([name, sets]) => name + ": " + (workout.e ? setPrescription(sets, index, name) : easyPrescription(sets, name)))
   ];
   if (workout.e) blocks.push(PHASES[index].tip + " Rest 2 to 3 minutes on the first two lifts and 1 to 2 minutes on the rest.");
   else blocks.push("Easy days help you recover. Keep it light enough that you could hold a conversation.");
@@ -5009,7 +5428,7 @@ for (const [name, [keys, muscles, cues, mistake, swap]] of Object.entries(EXERCI
     const blocks = [{ art: name }, "Works: " + muscles + ".", cues, "Common mistake: " + mistake, "If you cannot do it: " + swap + "."];
     if (days.length) {
       const sets = days[0].x.find(([exercise]) => exercise === name)[1];
-      blocks.push("In your plan on " + days.map((day) => day.d).join(" and ") + ": " + (days[0].e ? setPrescription(sets, phase ? phase.index : 0) : sets) + ".");
+      blocks.push("In your plan on " + days.map((day) => day.d).join(" and ") + ": " + (days[0].e ? setPrescription(sets, phase ? phase.index : 0, name) : easyPrescription(sets, name)) + ".");
     }
     return blocks;
   });
@@ -5095,7 +5514,7 @@ function coachContext(question) {
   if (days.length) lines.push("LAST 7 DAYS: " + days.length + " logged, average " + average("calories") + " cal and " + average("protein") + " g protein a day.");
   if (weeks.length) lines.push("WEIGHT, weekly averages: " + weeks.map((week) => week.average.toFixed(1)).join(" -> ") + " lb.");
   lines.push("TRAINING: Mon push, Tue pull, Wed legs, Thu easy cardio and abs, Fri upper, Sat lower, Sun walk and stretch. Gym at " + gymTimeText() + "." + (phase && !phase.upcoming ? " Week " + phase.week + " of a repeating 4-week cycle (" + PHASES[phase.index].name.toLowerCase() + " week)." : ""));
-  lines.push("TODAY’S WORKOUT: " + workout.n + ": " + workout.x.map(([name, sets]) => name + " " + (workout.e ? setPrescription(sets, phase ? phase.index : 0) : sets)).join(", ") + ".");
+  lines.push("TODAY’S WORKOUT: " + workout.n + ": " + workout.x.map(([name, sets]) => name + " " + (workout.e ? setPrescription(sets, phase ? phase.index : 0, name) : easyPrescription(sets, name))).join(", ") + ".");
   lines.push("SUPPLEMENTS: " + (supplementLine() || "none") + ". Taken today: " + (state.settings.pills.filter((pill) => today.pills[pill.id]).map((pill) => pill.name).join(", ") || "none yet") + ".");
   lines.push("", "MY QUESTION: " + (question || "(type your question here)"), "", "Keep the answer short and simple.");
   return lines.join("\n");

@@ -62,6 +62,21 @@ final class AppTests: XCTestCase {
         for _ in 0..<50 where SavedData.shared.value(for: key) != nil { try await Task.sleep(nanoseconds: 100_000_000) }
         XCTAssertNil(SavedData.shared.value(for: key), "Deletions are copied too")
 
+        // Every exercise in the plan has a moving drawing in both builds, and the two builds differ.
+        let drawings = await js("""
+            (() => { const names = [...new Set(G.flatMap((day) => day.x.map((row) => row[0])))];
+              return names.every((name) => RIGS[name] && ["male", "female"].every((sex) => {
+                const svg = FIG.draw(RIGS[name], sex, false); return svg.includes("<animate") && !/NaN|undefined|Infinity/.test(svg); })); })()
+            """) as? Bool
+        XCTAssertEqual(drawings, true, "Every exercise draws as a man and as a woman")
+        let builds = await js("FIG.draw(RIGS['Squat'], 'male', true) !== FIG.draw(RIGS['Squat'], 'female', true)") as? Bool
+        XCTAssertEqual(builds, true, "The man's and the woman's drawings are different")
+        let shaded = await js("""
+            (() => { const holder = document.createElement("div"); holder.innerHTML = FIG.draw(RIGS["Squat"], "male", true); document.body.appendChild(holder);
+              const fill = getComputedStyle(holder.querySelector("path.skin")).fill; holder.remove(); return fill; })()
+            """) as? String
+        XCTAssertTrue((shaded ?? "").contains("fig-skin"), "Figure styling is applied (got \(shaded ?? "nil"))")
+
         let clipboard = await js("typeof navigator.clipboard.writeText") as? String
         XCTAssertEqual(clipboard, "function")
         let fixedZoom = await js("document.querySelector('meta[name=viewport]').content.includes('user-scalable=no')") as? Bool

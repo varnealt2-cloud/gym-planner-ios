@@ -1,7 +1,7 @@
 # Gym Planner for iPhone and iPad
 
-A gym, food and supplement tracker that starts completely blank. You enter your own goals, your own
-supplements and your own details, and everything stays on your device.
+A gym, food and supplement tracker that starts completely blank. You choose a man's or a woman's body for the
+exercise drawings, pick your goal, enter your own details and supplements, and everything stays on your device.
 
 <p>
   <img src="docs/screenshots/setup.png" width="24%" alt="First run: set up your plan">
@@ -17,7 +17,13 @@ supplements and your own details, and everything stays on your device.
   works out calories, protein, carbs and fat. Saved meals, quick add, your own foods from a label, and a
   packaged-food lookup by barcode number or name.
 - **Gym plan.** A five-day lifting week (push, pull, legs, upper, lower) with two easy days, on a repeating
-  four-week cycle that tells you how many sets to do each week. Every exercise has a drawing and a video link.
+  four-week cycle that tells you how many sets to do each week. Every exercise has a moving drawing and a video
+  link.
+- **Man or woman.** Choose the body shown in the drawings: an athletic man or an athletic woman. Each exercise
+  is drawn in both and moves through the lift.
+- **Your goal shapes the plan.** Build muscle (hypertrophy), get stronger, lose fat, lose fat and build muscle,
+  or stay in shape. Getting stronger turns the big lifts into heavier sets of 5 or 6 with an extra set; losing
+  fat keeps the lifting and makes the walks longer; the app also suggests calories and protein for the goal.
 - **Supplements.** Add what you take and when (with your first meal, before the gym, after the gym, any time),
   then check them off each day.
 - **Weight.** Weigh-ins, a chart and weekly averages, so you judge the trend and not one day.
@@ -30,11 +36,12 @@ supplements and your own details, and everything stays on your device.
 
 Nothing about anyone is built in. On first launch the app asks for:
 
-- your calories and protein per day (it can suggest numbers from your age, height, weight and goal, or you type
-  your own),
+- the body for the drawings (man or woman) and your goal,
+- your age, height and weight if you want it to work out calories and protein for you,
+- your calories and protein per day (use the suggestion or type your own),
 - the first day of your plan and your usual gym time.
 
-Supplements, an optional "About you" note for the coach, and an API key are all things you add yourself later.
+Supplements, an optional note for the coach, and an API key are all things you add yourself later.
 
 ## Privacy
 
@@ -56,7 +63,7 @@ This app gives general fitness and nutrition information. It is not medical advi
 ## Download
 
 **[Download Gym-Planner.ipa](https://github.com/varnealt2-cloud/gym-planner-ios/raw/main/download/Gym-Planner.ipa)**
-(version 1.0.0). It is the file produced by the automated build after the tests passed.
+(version 1.1.0). It is the file produced by the automated build after the tests passed.
 
 ## Install
 
@@ -108,18 +115,20 @@ your own, pick your device and press Run.
 
 ## Using it
 
-1. **Set up.** Open the app, enter your calories, protein, start date and gym time, and tap **Start**. Tap
-   **Help me pick my numbers** if you want a suggestion.
+1. **Set up.** Open the app, tap **Man** or **Woman**, choose your goal, and enter your calories, protein, start
+   date and gym time. To get a suggestion, fill in age, weight and height and tap **Work out my calories and
+   protein**. Then tap **Start**.
 2. **Log food.** Food tab → type what you ate → **Add food**. Put a comma between foods. Amounts work like
    "half", "2x", "6 oz steak", "200g rice" or "1 cup milk". Tap a logged food to swap it for a similar one.
-3. **Train.** Gym tab shows today's workout. Tap a drawing to enlarge it, or **Watch** for a video.
+3. **Train.** Gym tab shows today's workout, fitted to your goal. Tap a drawing to enlarge it, or **Watch** for
+   a video.
 4. **Supplements.** More → Pills → add each one with its timing, then check them off daily.
 5. **Weigh in** a few mornings a week under More → Weight.
 6. **Ask the coach** anything on the Coach tab. To use Claude, go to More → Settings → Claude AI and paste a key
    from [console.anthropic.com](https://console.anthropic.com/). The app tracks what each question cost.
 7. **Back up** now and then: More → Settings → Copy backup, and paste it into Notes.
 
-Change your goals, gym time and "About you" at any time under More → Settings.
+Change the body, your goal, your numbers, gym time and "About you" at any time under More → Settings.
 
 ## Questions
 
@@ -130,7 +139,11 @@ so paste it again.
 **The app stopped opening after a week.** It was signed with a free Apple ID, which lasts 7 days. Refresh it
 with the tool you installed it with. Nothing in the app is lost.
 
-**Can I change the workout plan?** Not in this version. The program is fixed; sets change week to week.
+**Can I change the workout plan?** The exercises are fixed. The sets, reps and walk lengths follow the goal you
+pick, and sets change week to week.
+
+**Are the drawings photos?** No. They are drawn figures (vector art) built to look like an athletic man or woman,
+and they move between the start and end of each lift.
 
 **Are the food numbers exact?** Everyday basics use USDA figures and chain items use the chains' published
 numbers. Entries marked ≈ are estimates. For packaged food, use the label (Settings → My foods).
@@ -144,10 +157,11 @@ Every change is built and tested automatically on GitHub's Mac runners (see the
   with Xcode 26.
 - **iPhone, iOS 18** and **iPad, iPadOS 18** simulators, built with Xcode 16.
 
-On each of them the tests start the real app and check that it opens blank, takes a person's own calorie and
-protein goals, shows every tab, has no supplements pre-filled, and still has the data after a relaunch and
-after the web view's storage is wiped. The page itself is also run through its flows in a desktop browser
-(setup, food logging, supplements, the coach, backup and restore).
+On each of them the tests start the real app and check that it opens blank, offers both bodies, takes a person's
+own calorie and protein goals, shows every tab, has no supplements pre-filled, and still has the data after a
+relaunch and after the web view's storage is wiped. They also check that every exercise has a moving drawing
+as a man and as a woman. The page itself is also run through its flows in a desktop browser (setup, body and
+goal, food logging, supplements, the coach, backup and restore).
 
 iOS 15, 16 and 17 are supported by the code but GitHub's runners no longer offer those simulators, so they are
 not tested automatically. The Claude connection and the camera were not exercised by the automated tests. If

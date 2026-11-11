@@ -31,12 +31,22 @@ final class AppUITests: XCTestCase {
         sleep(1)
         save("1-first-run")
 
-        let fields = web.textFields
-        XCTAssertGreaterThanOrEqual(fields.count, 2)
-        type("2600", into: fields.element(boundBy: 0), app: app)
-        type("150", into: fields.element(boundBy: 1), app: app)
+        // Body for the drawings: both choices are offered, pick one.
+        XCTAssertTrue(web.staticTexts["Man"].exists && web.staticTexts["Woman"].exists, "Setup offers a man's and a woman's body")
+        web.staticTexts["Woman"].tap()
+
+        // Web fields carry their label; fall back to their position in the form (age, weight, feet, inches come first).
+        func field(_ label: String, position: Int) -> XCUIElement {
+            let named = web.textFields[label]
+            return named.exists ? named : web.textFields.element(boundBy: position)
+        }
+        XCTAssertGreaterThanOrEqual(web.textFields.count, 6)
+        type("2600", into: field("Calories per day", position: 4), app: app)
+        type("150", into: field("Protein per day (g)", position: 5), app: app)
         save("2-setup-filled")
-        web.buttons["Start"].tap()
+        let start = web.buttons["Start"]
+        if !start.isHittable { web.swipeUp() }
+        start.tap()
         XCTAssertTrue(web.staticTexts["Food today"].waitForExistence(timeout: 20), "Setup leads to the Today screen")
         XCTAssertTrue(web.staticTexts.matching(NSPredicate(format: "label CONTAINS '2,600'")).firstMatch.waitForExistence(timeout: 10), "The entered calorie goal is used")
         sleep(1)
