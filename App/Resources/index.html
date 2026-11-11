@@ -43,7 +43,8 @@
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --round: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --nav-h: 64px;
-  --nav-gap: 10px;
+  /* Space under the floating tab bar: it sits low, close to the home indicator, like system tab bars. */
+  --nav-gap: max(calc(env(safe-area-inset-bottom, 0px) - 12px), 10px);
   --spring: cubic-bezier(.3, 1.5, .5, 1);
 }
 
@@ -88,7 +89,7 @@ a { color: var(--amber-ink); }
 .shell {
   max-width: 560px;
   margin: 0 auto;
-  padding: calc(env(safe-area-inset-top, 0px) + 18px) 16px calc(var(--nav-h) + var(--nav-gap) + env(safe-area-inset-bottom, 0px) + 30px);
+  padding: calc(env(safe-area-inset-top, 0px) + 18px) 16px calc(var(--nav-h) + var(--nav-gap) + 30px);
 }
 .view { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; animation: rise .32s var(--spring) both; }
 @keyframes rise { from { opacity: 0; transform: translateY(10px) scale(.985); } to { opacity: 1; transform: none; } }
@@ -567,7 +568,7 @@ a.btn.primary { color: var(--on-amber); }
 
 /* The message box floats above the tab bar as its own glass capsule. */
 .composer {
-  position: fixed; z-index: 9; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--nav-gap) + env(safe-area-inset-bottom, 0px) + 6px);
+  position: fixed; z-index: 9; left: 0; right: 0; bottom: calc(var(--nav-h) + var(--nav-gap) + 8px);
   width: 100%; max-width: 560px; margin: 0 auto; padding: 0 12px;
   background: none;
 }
@@ -616,7 +617,7 @@ body.typing .composer { bottom: calc(var(--kb, 0px) + 8px); }
 /* ---------- tab bar: a floating glass capsule ---------- */
 .nav {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
-  padding: 0 12px calc(env(safe-area-inset-bottom, 0px) + var(--nav-gap));
+  padding: 0 12px var(--nav-gap);
   background: none; pointer-events: none;
 }
 .nav-items {

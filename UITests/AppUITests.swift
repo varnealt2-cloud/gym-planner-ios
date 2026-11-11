@@ -42,12 +42,22 @@ final class AppUITests: XCTestCase {
         sleep(1)
         save("3-today")
 
-        for (tab, expected) in [("Food", "What did you eat?"), ("Gym", "Four-week cycle"), ("Coach", "What do you want to know?"), ("More", "Settings")] {
+        for (tab, expected) in [("Food", "What did you eat?"), ("Gym", "Four-week cycle"), ("Coach", "What do you want to know?")] {
             web.buttons[tab].tap()
             XCTAssertTrue(web.staticTexts[expected].waitForExistence(timeout: 15), "\(tab) tab opens")
             sleep(1)
             save("4-" + tab.lowercased())
         }
+        // More is a list of buttons; open Pills from it and add nothing: a blank app has no supplements.
+        web.buttons["More"].tap()
+        let pills = web.buttons.matching(NSPredicate(format: "label CONTAINS 'Your supplements and daily checklist'")).firstMatch
+        XCTAssertTrue(pills.waitForExistence(timeout: 15), "More tab opens")
+        save("4-more")
+        pills.tap()
+        XCTAssertTrue(web.staticTexts["Your supplements"].waitForExistence(timeout: 15), "Pills screen opens")
+        XCTAssertTrue(web.staticTexts["None yet"].exists, "No supplements are pre-filled")
+        sleep(1)
+        save("5-pills")
 
         app.terminate()
         let afterLoss = XCUIApplication()
