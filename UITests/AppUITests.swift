@@ -10,6 +10,24 @@ final class AppUITests: XCTestCase {
         let tag = ProcessInfo.processInfo.environment["SNAPSHOT_TAG"].map { "-" + $0 } ?? ""
         try? shot.pngRepresentation.write(to: URL(fileURLWithPath: folder).appendingPathComponent("\(device)\(tag)-\(name).png"))
     }
+    /// A thin sample of what is on screen, to tell whether the picture itself changed.
+    private func screenSample() -> [UInt8] {
+        guard let data = XCUIScreen.main.screenshot().image.cgImage?.dataProvider?.data, let bytes = CFDataGetBytePtr(data) else { return [] }
+        return stride(from: 0, to: CFDataGetLength(data), by: 97).map { bytes[$0] }
+    }
+    /// Waits until the screen really shows something new: more than a moving drawing or the clock would change.
+    private func waitForNewScreen(since before: [UInt8], _ what: String) {
+        let deadline = Date().addingTimeInterval(40)
+        var share = 0.0
+        repeat {
+            let now = screenSample()
+            if now.count != before.count || now.isEmpty { return }
+            share = Double(zip(before, now).filter { $0 != $1 }.count) / Double(now.count)
+            if share > 0.02 { return }
+            usleep(500_000)
+        } while Date() < deadline
+        XCTFail("The screen did not visibly change after opening \(what) (changed share \(share))")
+    }
     private func type(_ text: String, into field: XCUIElement, app: XCUIApplication) {
         // The first tap on a web field can land before the keyboard is ready on a busy simulator.
         for _ in 0..<3 {
@@ -53,8 +71,10 @@ final class AppUITests: XCTestCase {
         save("3-today")
 
         for (tab, expected) in [("Food", "What did you eat?"), ("Gym", "Four-week cycle"), ("Coach", "What do you want to know?")] {
+            let before = screenSample()
             web.buttons[tab].tap()
             XCTAssertTrue(web.staticTexts[expected].waitForExistence(timeout: 15), "\(tab) tab opens")
+            waitForNewScreen(since: before, tab)
             sleep(1)
             save("4-" + tab.lowercased())
         }

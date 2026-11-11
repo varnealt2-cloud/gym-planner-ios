@@ -3754,6 +3754,23 @@ const RIGS = (() => {
   return rigs;
 })();
 function add2(p, v) { return [p[0] + v[0], p[1] + v[1]]; }
+// Drawings only move while they are on screen and clear of the tab bar; the rest hold their first position.
+const figureWatch = typeof IntersectionObserver === "function" ? new IntersectionObserver((entries) => {
+  for (const entry of entries) {
+    const svg = entry.target;
+    if (typeof svg.pauseAnimations !== "function") continue;
+    if (entry.isIntersecting) svg.unpauseAnimations();
+    else svg.pauseAnimations();
+  }
+}, { rootMargin: "0px 0px -90px 0px", threshold: 0.35 }) : null;
+if (figureWatch && typeof MutationObserver === "function") {
+  new MutationObserver(() => {
+    for (const svg of document.querySelectorAll("svg.figure:not([data-watched])")) {
+      svg.dataset.watched = "1";
+      figureWatch.observe(svg);
+    }
+  }).observe(document.body, { childList: true, subtree: true });
+}
 function exerciseArt(name) {
   const rig = RIGS[name] || RIGS.Walk;
   const still = typeof matchMedia === "function" && matchMedia("(prefers-reduced-motion: reduce)").matches;
