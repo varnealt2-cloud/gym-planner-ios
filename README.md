@@ -55,7 +55,8 @@ This app gives general fitness and nutrition information. It is not medical advi
 
 ## Download
 
-The download is being rebuilt and will be linked here shortly.
+**[Download Gym-Planner.ipa](https://github.com/varnealt2-cloud/gym-planner-ios/raw/main/download/Gym-Planner.ipa)**
+(version 1.0.0). It is the file produced by the automated build after the tests passed.
 
 ## Install
 
