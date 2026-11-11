@@ -1,0 +1,12 @@
+124:Test Case '-[GymPlannerTests.AppTests testPageRunsAndItsStorageIsMirrored]' passed (10.358 seconds).
+126:Test Case '-[GymPlannerTests.AppTests testSavedDataFallsBackToThePreviousCopy]' passed (0.106 seconds).
+128:Test Case '-[GymPlannerTests.AppTests testSavedDataSurvivesARestart]' passed (0.008 seconds).
+130:Test Case '-[GymPlannerTests.AppTests testStartScriptCarriesSavedValuesSafely]' passed (0.002 seconds).
+132:	 Executed 4 tests, with 0 failures (0 unexpected) in 10.475 (10.483) seconds
+134:	 Executed 4 tests, with 0 failures (0 unexpected) in 10.475 (10.486) seconds
+136:	 Executed 4 tests, with 0 failures (0 unexpected) in 10.475 (10.504) seconds
+140:objc[37944]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x106a3c310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x106a70398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+307:Test Case '-[GymPlannerUITests.AppUITests testFirstRunEveryTabAndDataSafety]' passed (212.504 seconds).
+309:	 Executed 1 test, with 0 failures (0 unexpected) in 212.504 (212.524) seconds
+311:	 Executed 1 test, with 0 failures (0 unexpected) in 212.504 (212.526) seconds
+313:	 Executed 1 test, with 0 failures (0 unexpected) in 212.504 (212.538) seconds

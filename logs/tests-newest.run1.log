@@ -1,0 +1,1009 @@
+Command line invocation:
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/xcodebuild test -project GymPlanner.xcodeproj -scheme GymPlanner -destination "platform=iOS Simulator,id=5277349A-B219-4ED4-853A-8AE666B9F5B1" -derivedDataPath build/DerivedDataSim -resultBundlePath build/Tests-newest.xcresult -retry-tests-on-failure -test-iterations 3 CODE_SIGNING_ALLOWED=NO
+
+Build settings from command line:
+    CODE_SIGNING_ALLOWED = NO
+
+Retrying tests on failure. Running tests repeatedly up to 3 times.
+
+Writing result bundle at path:
+	/Users/runner/work/gym-planner-ios/gym-planner-ios/build/Tests-newest.xcresult
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, arch:arm64, id:5277349A-B219-4ED4-853A-8AE666B9F5B1, OS:26.5, name:iPhone 17 Pro Max }
+{ platform:iOS Simulator, arch:x86_64, id:5277349A-B219-4ED4-853A-8AE666B9F5B1, OS:26.5, name:iPhone 17 Pro Max }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (3 targets)
+    Target 'GymPlannerUITests' in project 'GymPlanner'
+        ➜ Explicit dependency on target 'GymPlanner' in project 'GymPlanner'
+    Target 'GymPlannerTests' in project 'GymPlanner'
+        ➜ Explicit dependency on target 'GymPlanner' in project 'GymPlanner'
+    Target 'GymPlanner' in project 'GymPlanner' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+Build description signature: af1a06ccd3f2d507c2f52097e6d11e9d
+Build description path: /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/XCBuildData/af1a06ccd3f2d507c2f52097e6d11e9d.xcbuilddata
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products
+
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex
+
+ClangStatCache /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache
+
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner-a0f0ff8861203df65de9ebe2de2d3ff0-VFS-iphonesimulator/all-product-headers.yaml
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner-a0f0ff8861203df65de9ebe2de2d3ff0-VFS-iphonesimulator/all-product-headers.yaml
+
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/ExplicitPrecompiledModules
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+CreateBuildDirectory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios/GymPlanner.xcodeproj
+    builtin-create-build-directory /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/empty-GymPlannerUITests.plist (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/empty-GymPlannerUITests.plist
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/ProductTypeInfoPlistAdditions.plist (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/ProductTypeInfoPlistAdditions.plist
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_const_extract_protocols.json (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftConstValuesFileList (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.LinkFileList (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-OutputFileMap.json (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyStaticMetadataFileList (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyMetadataFileList (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-project-headers.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-own-target-headers.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-generated-files.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-target-headers.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-non-framework-target-headers.hmap (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/empty-GymPlannerTests.plist (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/empty-GymPlannerTests.plist
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_const_extract_protocols.json (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftConstValuesFileList (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.LinkFileList (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-OutputFileMap.json (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyStaticMetadataFileList (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyMetadataFileList (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-project-headers.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-own-target-headers.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-generated-files.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-target-headers.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-non-framework-target-headers.hmap (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_const_extract_protocols.json (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_const_extract_protocols.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftConstValuesFileList (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftConstValuesFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.LinkFileList (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.LinkFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-OutputFileMap.json (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-OutputFileMap.json
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyStaticMetadataFileList (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyStaticMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyMetadataFileList (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyMetadataFileList
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-project-headers.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-project-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-own-target-headers.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-own-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-generated-files.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-generated-files.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-target-headers.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-non-framework-target-headers.hmap (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-non-framework-target-headers.hmap
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibPath-normal-arm64.txt (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibPath-normal-arm64.txt
+
+WriteAuxiliaryFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibInstallName-normal-arm64.txt (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    write-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibInstallName-normal-arm64.txt
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app
+
+Ld /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/__preview.dylib normal (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0-simulator -dynamiclib -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -install_name @rpath/GymPlanner.debug.dylib -Xlinker -dead_strip -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_dependency_info.dat -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/__preview.dylib
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/unthinned (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/unthinned
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned
+
+GenerateAssetSymbols /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/actool /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets --compile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_dependencies --output-partial-info-plist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 15.0 --platform iphonesimulator --bundle-identifier app.gymplanner.ios --generate-swift-asset-symbol-extensions NO --generate-swift-asset-symbols /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.swift --generate-objc-asset-symbols /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.h --generate-asset-symbol-index /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/* com.apple.actool.compilation-results */
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols-Index.plist
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.h
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.swift
+
+
+CpResource /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/index.html /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/index.html (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/index.html /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/libXCTestBundleInject.dylib /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestBundleInject.dylib (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestBundleInject.dylib /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCUnit.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCUIAutomation.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCTestSupport.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCTestCore.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCTest.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/XCTAutomationSupport.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks/Testing.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks
+
+CompileAssetCatalogVariant thinned /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/usr/bin/actool /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets --compile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned --output-format human-readable-text --notices --warnings --export-dependency-info /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_dependencies_thinned --output-partial-info-plist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist_thinned --app-icon AppIcon --accent-color AccentColor --compress-pngs --enable-on-demand-resources YES --filter-for-thinning-device-configuration iPhone18,2 --filter-for-device-os-version 26.5 --development-region en --target-device iphone --target-device ipad --minimum-deployment-target 15.0 --platform iphonesimulator
+/* com.apple.actool.compilation-results */
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist_thinned
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned/AppIcon60x60@2x.png
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned/AppIcon76x76@2x~ipad.png
+/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned/Assets.car
+
+
+SwiftDriver GymPlanner normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-SwiftDriver -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlanner -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/ptrauth-V7LA08X79VIEHNCZZ2FYE5Q8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_stdarg-9P67XJJ93D2JF9W55PP3NR5TF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_AvailabilityInternal-BJCO5FGP1FJXG2IAJ72UDCMR3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_stddef-C69R3J4KR63YO4G35DYXGGH8V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/SwiftShims-EU7DWWHPTKAVC7BM5G7LWXGRR.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_stdbool-1EMRH9SHLTKGOHP177H0ZVLXO.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/ptrcheck-HNCPVLQOK182IMBQ0FFB07PX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_SwiftConcurrencyShims-DPJDRIAE6A4N0YBR4W6Q4TRF4.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_DarwinFoundation1-E3NKC6CD7VZ2MKIERVPKHA7XQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_float-11DWJ8YUV9B617U7FBSKM9N2Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/DeveloperToolsSupport-C8P68BQSE0BKKAY72HZHDS7JT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_DarwinFoundation2-1F67EVXUXPBELWBMEH5HK05BG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_limits-CFS9MO910QB4DP7TNZRA3GM0V.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_stdint-9EGE38FOZ49XU1R2P8MZR1DDT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_tgmath-69HL11A4LOB0R5PVUG6LNZN9X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/sys_types-F3B1AMJGF8TZ8X90QGD35BCXS.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_intrinsics-7VCO9YIRR6PA63JOA85JI0WU7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_stdatomic-TQRXUWJIULLWRLOJM3XRWZN7.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_DarwinFoundation3-842GQ9RIK5SS2WXKO3ASCT75R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/simd-B860EE5F2NFKVR2FEIVVZON3B.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/_Builtin_inttypes-D8WF80Q8UV7FJNL6S07N632T3.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Darwin-29CP2O55VRMIDI0HECHEME1F5.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/ObjectiveC-4SFW96VMG6ZYCT92MW6YQV81P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/MachO-BS3N9B31ENNIEU61X2O7LZUTW.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Spatial-3T7HYZQXU0BACF13WA5LZZCQG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/os_object-X97G5DSG1KVP9YHBR9SK3PW0.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/os_workgroup-DHOTPSGDME6WNQN4258T0LOBT.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Dispatch-3K67QDQRUGM9SKPZ65AEI0Z8X.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/dnssd-P0PW9MWP11PSYKK139VS5OBF.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreFoundation-9SIS71B2F42X1VBVT8LV0EXE8.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/XPC-ATHPTA2V18N2Z9AGTI5RKHFNI.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CFNetwork-560KFPZ8OQKAXD8SDPPNEATFU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Security-1R4MABK6JEVZCHOH4257AQBXG.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/os-C283IROFVEKHFG5J34TY0UF6Q.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreGraphics-F0AIZRUJ71TYFG3U73HTFDUCD.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Foundation-9X3JVWIVZM815BZH5EVSP7EX6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreText-60P3NBBOAMTCCSH9BPYL4R230.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/ImageIO-8RM7YTMPU82Q5A8J4CBJIUFHE.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/UIUtilities-4B1E50C13CSKP3A0NXSZLI1V6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreData-160JIHD6CTAM7HD20JNR07CVP.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/FileProvider-L6KT57T71DVTK1LYU8PBP0FJ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/OpenGLES-95LU4AG15RSXFMJPZWM9K5K5P.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Accessibility-4E3AWA49HRYORUZ0WUJUEYFCL.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/IOSurface-6U0TTCYTVABB80T9JKXPN95EZ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Network-BMLHJONHPU8NG4Q9WJ41E7DMU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/UniformTypeIdentifiers-B4LCTJMODWEUGQMJE7ARFM83R.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/OSLog-KMWN9KS6ET1CHGJ2CGZ6NHZK.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Symbols-3GA6GTXWI6KC2MMFDSTB20XUB.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Metal-DT3136KQAMK3H7T0F1UQ6L0TQ.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/UserNotifications-5EZRRYKFJ0HD2WPVV7IWROKH.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/DataDetection-489ZZQVUS34MVXJA7HYO6DEN6.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreTransferable-4ZZLJF3CV7TH1UYW6CTI5WF8T.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreVideo-21OLJ2YBJVW4TTOD5RMJ436LN.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/CoreImage-918CF5CQXMWT9QID2FJB7A9W.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/QuartzCore-B1QGJ6N0LJRU01OWDKT483D81.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/SwiftUICore-CT5P0ADY0WVCDD7FUI8HOQZL1.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/UIKit-H747HW0SKKN5NU17H52JDCPU.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/WebKit-BVYV57M1JAB61Q80B9KDZ9XSX.pcm
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/SwiftUI-9AB4MA8VQKXBZQQRONBZQI2A7.pcm
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ GymPlanner (in target 'GymPlanner' from project 'GymPlanner')
+
+EmitSwiftModule normal arm64 (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftCompile normal arm64 Compiling\ WebScreen.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/App/WebScreen.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/App/WebScreen.swift (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftCompile normal arm64 Compiling\ GeneratedAssetSymbols.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GeneratedAssetSymbols.swift (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for GymPlanner (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftDriver\ Compilation\ Requirements GymPlanner normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlanner -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling WebScreen.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftCompile normal arm64 Compiling\ GymPlannerApp.swift,\ SavedData.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/App/GymPlannerApp.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/App/SavedData.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/App/GymPlannerApp.swift (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/App/SavedData.swift (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftMergeGeneratedHeaders /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GymPlanner-Swift.h /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-Swift.h (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-Swift.h -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/GymPlanner-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Compiling GeneratedAssetSymbols.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftdoc (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.abi.json (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftsourceinfo (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver GymPlannerUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-SwiftDriver -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerUITests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling GymPlannerApp.swift, SavedData.swift (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftDriver\ Compilation GymPlanner normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlanner -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList -DDEBUG -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+Ld /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib normal (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0-simulator -dynamiclib -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -filelist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.LinkFileList -install_name @rpath/GymPlanner.debug.dylib -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.swiftmodule @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner-linker-args.resp -Xlinker -alias -Xlinker _main -Xlinker ___debug_main_executable_dylib_entry_point -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-CVJWNDMY3AVL71G6G9EWVDJYQ.pcm
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCUIAutomation-RS0WG1U1RX2I.swiftmodule
+
+SwiftDriver GymPlannerTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-SwiftDriver -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerTests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftExplicitDependencyGeneratePcm arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-34JAC2NNI4XYDBJRWBI6ZBIGK.pcm
+
+ConstructStubExecutorLinkFileList /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-ExecutorLinkFileList-normal-arm64.txt (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    construct-stub-executor-link-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor_no_swift_entry_point.a /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libPreviewsJITStubExecutor.a --output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-ExecutorLinkFileList-normal-arm64.txt
+note: Using stub executor library with Swift entry point. (in target 'GymPlanner' from project 'GymPlanner')
+
+SwiftExplicitDependencyCompileModuleFromInterface arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules/XCTest-2SFCQTCE1HY7P.swiftmodule
+
+Ld /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner normal (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0-simulator -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Xlinker -rpath -Xlinker @executable_path -Xlinker -rpath -Xlinker @executable_path/Frameworks -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -e ___debug_blank_executor_main -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_dylib -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibPath-normal-arm64.txt -Xlinker -sectcreate -Xlinker __TEXT -Xlinker __debug_instlnm -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-DebugDylibInstallName-normal-arm64.txt -Xlinker -filelist -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner-ExecutorLinkFileList-normal-arm64.txt /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ GymPlannerUITests (in target 'GymPlannerUITests' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/UITests/AppUITests.swift (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftCompile normal arm64 Compiling\ AppUITests.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/UITests/AppUITests.swift (in target 'GymPlannerUITests' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/UITests/AppUITests.swift (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for GymPlannerUITests (in target 'GymPlannerUITests' from project 'GymPlanner')
+
+SwiftDriver\ Compilation\ Requirements GymPlannerUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerUITests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftEmitModule normal arm64 Emitting\ module\ for\ GymPlannerTests (in target 'GymPlannerTests' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/Tests/AppTests.swift (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftMergeGeneratedHeaders /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources/GymPlannerUITests-Swift.h /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-Swift.h (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-Swift.h -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources/GymPlannerUITests-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Emitting module for GymPlannerTests (in target 'GymPlannerTests' from project 'GymPlanner')
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftdoc (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.abi.json (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftsourceinfo (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver\ Compilation\ Requirements GymPlannerTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation-Requirements -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerTests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftCompile normal arm64 Compiling\ AppTests.swift /Users/runner/work/gym-planner-ios/gym-planner-ios/Tests/AppTests.swift (in target 'GymPlannerTests' from project 'GymPlanner')
+
+SwiftCompile normal arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/Tests/AppTests.swift (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    
+
+SwiftMergeGeneratedHeaders /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources/GymPlannerTests-Swift.h /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-Swift.h (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftHeaderTool -arch arm64 /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-Swift.h -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources/GymPlannerTests-Swift.h
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppUITests.swift (in target 'GymPlannerUITests' from project 'GymPlanner')
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.swiftmodule
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftdoc (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftdoc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.swiftdoc
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.abi.json (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.abi.json /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/arm64-apple-ios-simulator.abi.json
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftsourceinfo (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks -rename /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftsourceinfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerTests.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo
+
+SwiftDriver\ Compilation GymPlannerUITests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerUITests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList -DDEBUG -module-alias Testing\=_Testing_Unavailable -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+SwiftDriverJobDiscovery normal arm64 Compiling AppTests.swift (in target 'GymPlannerTests' from project 'GymPlanner')
+
+SwiftDriver\ Compilation GymPlannerTests normal arm64 com.apple.xcode.tools.swift.compiler (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-Swift-Compilation -- /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc -module-name GymPlannerTests -Onone @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList -DDEBUG -plugin-path /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing -enable-bare-slash-regex -enable-experimental-feature DebugDescriptionMacro -sdk /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -target arm64-apple-ios15.0-simulator -g -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -Xfrontend -serialize-debugging-options -enable-testing -index-store-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Index.noindex/DataStore -Xcc -D_LIBCPP_HARDENING_MODE\=_LIBCPP_HARDENING_MODE_DEBUG -swift-version 5 -I /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -Isystem /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -F /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -parse-as-library -c -j3 -enable-batch-mode -incremental -Xcc -ivfsstatcache -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/SDKStatCaches.noindex/iphonesimulator26.5-23F81a-688ef53f1462e2c8f657fdc38a81448ff45c64a1807a658693f2a61704f17a36.sdkstatcache -output-file-map /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-OutputFileMap.json -use-frontend-parseable-output -save-temps -no-color-diagnostics -explicit-module-build -module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules -clang-scanner-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -sdk-module-cache-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex -serialize-diagnostics -emit-dependencies -emit-module -emit-module-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule -validate-clang-modules-once -clang-build-session-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/ModuleCache.noindex/Session.modulevalidation -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/swift-overrides.hmap -emit-const-values -Xfrontend -const-gather-protocols-file -Xfrontend /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_const_extract_protocols.json -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-generated-files.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-own-target-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-all-target-headers.hmap -Xcc -iquote -Xcc /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests-project-headers.hmap -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/include -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources-normal/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources/arm64 -Xcc -I/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/DerivedSources -Xcc -DDEBUG\=1 -emit-objc-header -emit-objc-header-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-Swift.h -working-directory /Users/runner/work/gym-planner-ios/gym-planner-ios -experimental-emit-module-separately -disable-cmo
+
+LinkAssetCatalog /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Resources/Assets.xcassets (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-linkAssetCatalog --thinned /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/thinned --thinned-dependencies /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_dependencies_thinned --thinned-info-plist-content /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist_thinned --unthinned /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_output/unthinned --unthinned-dependencies /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_dependencies_unthinned --unthinned-info-plist-content /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist_unthinned --output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app --plist-output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist
+note: Emplaced /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/AppIcon76x76@2x~ipad.png (in target 'GymPlanner' from project 'GymPlanner')
+note: Emplaced /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/AppIcon60x60@2x.png (in target 'GymPlanner' from project 'GymPlanner')
+note: Emplaced /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Assets.car (in target 'GymPlanner' from project 'GymPlanner')
+
+ProcessInfoPlistFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Info.plist /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Info.plist (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-infoPlistUtility /Users/runner/work/gym-planner-ios/gym-planner-ios/App/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/assetcatalog_generated_info.plist -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Info.plist
+
+ExtractAppIntentsMetadata (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --module-name GymPlanner --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 15.0 --bundle-identifier app.gymplanner.ios --output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app --target-triple arm64-apple-ios15.0-simulator --binary-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner --dependency-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner_dependency_info.dat --stringsdata-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftFileList --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/Objects-normal/arm64/GymPlanner.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-11-11 04:54:37.191 appintentsmetadataprocessor[17284:53012] Starting appintentsmetadataprocessor export
+2026-11-11 04:54:37.213 appintentsmetadataprocessor[17284:53012] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+CopySwiftLibs /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/SystemExtensions --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Frameworks --strip-bitcode --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+AppIntentsSSUTraining (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Info.plist --temp-dir-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/ssu --bundle-id app.gymplanner.ios --product-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app --extracted-metadata-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Metadata.appintents --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlanner.build/GymPlanner.DependencyMetadataFileList --source-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/Info.plist --archive-ssu-assets
+2026-11-11 04:54:37.347 appintentsnltrainingprocessor[17469:53432] Parsing options for appintentsnltrainingprocessor
+2026-11-11 04:54:37.350 appintentsnltrainingprocessor[17469:53432] Starting AppIntents SSU YAML Generation
+2026-11-11 04:54:37.367 appintentsnltrainingprocessor[17469:53432] No AppShortcuts found - Skipping.
+
+ProcessInfoPlistFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Info.plist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/empty-GymPlannerTests.plist (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-infoPlistUtility /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/empty-GymPlannerTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Info.plist
+
+Ld /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/GymPlannerTests normal (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0-simulator -bundle -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -L/Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -filelist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -bundle_loader /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner -Xlinker -object_path_lto -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.swiftmodule @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests-linker-args.resp -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/GymPlanner.debug.dylib -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/GymPlannerTests
+
+CopySwiftLibs /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/GymPlannerTests --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Frameworks --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/PlugIns --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/SystemExtensions --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --module-name GymPlannerTests --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 15.0 --bundle-identifier app.gymplanner.tests --output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest --target-triple arm64-apple-ios15.0-simulator --binary-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/GymPlannerTests --dependency-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests_dependency_info.dat --stringsdata-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftFileList --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/Objects-normal/arm64/GymPlannerTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-11-11 04:54:39.260 appintentsmetadataprocessor[17659:53843] Starting appintentsmetadataprocessor export
+2026-11-11 04:54:39.278 appintentsmetadataprocessor[17659:53843] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+AppIntentsSSUTraining (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Info.plist --temp-dir-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/ssu --bundle-id app.gymplanner.tests --product-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest --extracted-metadata-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Metadata.appintents --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerTests.build/GymPlannerTests.DependencyMetadataFileList --source-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest/Info.plist --archive-ssu-assets
+2026-11-11 04:54:39.316 appintentsnltrainingprocessor[17663:53851] Parsing options for appintentsnltrainingprocessor
+2026-11-11 04:54:39.317 appintentsnltrainingprocessor[17663:53851] Starting AppIntents SSU YAML Generation
+2026-11-11 04:54:39.317 appintentsnltrainingprocessor[17663:53851] No AppShortcuts found - Skipping.
+
+RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest
+
+Touch /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest (in target 'GymPlannerTests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /usr/bin/touch -c /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app/PlugIns/GymPlannerTests.xctest
+
+RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app
+
+Validate /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-validationUtility /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app -shallow-bundle -infoplist-subpath Info.plist
+
+Touch /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app (in target 'GymPlanner' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /usr/bin/touch -c /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlanner.app
+
+ProcessInfoPlistFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Info.plist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/empty-GymPlannerUITests.plist (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-infoPlistUtility /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/empty-GymPlannerUITests.plist -producttype com.apple.product-type.bundle.ui-testing -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/ProductTypeInfoPlistAdditions.plist -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Info.plist
+
+Ld /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/GymPlannerUITests normal (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-ios15.0-simulator -bundle -isysroot /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk -O0 -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -L/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -L/Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/EagerLinkingTBDs/Debug-iphonesimulator -F/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator -iframework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks -iframework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk/Developer/Library/Frameworks -filelist /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/Frameworks -Xlinker -rpath -Xlinker @executable_path/Frameworks -Xlinker -dead_strip -Xlinker -object_path_lto -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_lto.o -rdynamic -Xlinker -no_deduplicate -Xlinker -objc_abi_version -Xlinker 2 -Xlinker -dependency_info -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.swiftmodule @/Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests-linker-args.resp -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport -o /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/GymPlannerUITests
+
+CopySwiftLibs /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-swiftStdLibTool --copy --verbose --scan-executable /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/GymPlannerUITests --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Frameworks --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/PlugIns --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/SystemExtensions --scan-folder /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Extensions --platform iphonesimulator --toolchain /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --toolchain /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Frameworks --strip-bitcode --scan-executable /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os
+Ignoring --strip-bitcode because --sign was not passed
+
+ExtractAppIntentsMetadata (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /var/run/com.apple.security.cryptexd/mnt/com.apple.MobileAsset.MetalToolchain-v17.6.109.0.nwih0D/Metal.xctoolchain --module-name GymPlannerUITests --sdk-root /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator26.5.sdk --xcode-version 17F113 --platform-family iOS --deployment-target 15.0 --bundle-identifier app.gymplanner.uitests --output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest --target-triple arm64-apple-ios15.0-simulator --binary-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/GymPlannerUITests --dependency-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests_dependency_info.dat --stringsdata-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftFileList --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/Objects-normal/arm64/GymPlannerUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
+2026-11-11 04:54:40.093 appintentsmetadataprocessor[17757:54044] Starting appintentsmetadataprocessor export
+2026-11-11 04:54:40.107 appintentsmetadataprocessor[17757:54044] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+
+AppIntentsSSUTraining (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Info.plist --temp-dir-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/ssu --bundle-id app.gymplanner.uitests --product-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest --extracted-metadata-path /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Metadata.appintents --metadata-file-list /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Intermediates.noindex/GymPlanner.build/Debug-iphonesimulator/GymPlannerUITests.build/GymPlannerUITests.DependencyMetadataFileList --source-file /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Info.plist --archive-ssu-assets
+2026-11-11 04:54:40.141 appintentsnltrainingprocessor[17763:54055] Parsing options for appintentsnltrainingprocessor
+2026-11-11 04:54:40.141 appintentsnltrainingprocessor[17763:54055] Starting AppIntents SSU YAML Generation
+2026-11-11 04:54:40.141 appintentsnltrainingprocessor[17763:54055] No AppShortcuts found - Skipping.
+
+MkDir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /bin/mkdir -p /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app
+
+CopyAndPreserveArchs /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/GymPlannerUITests-Runner (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /Applications/Xcode_26.6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/XCTRunner -output /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/GymPlannerUITests-Runner -extract arm64
+
+CopyPlistFile /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Info.plist /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copyPlist --validate --convert xml1 --macro-expansion WRAPPEDPRODUCTNAME GymPlannerUITests-Runner --macro-expansion WRAPPEDPRODUCTBUNDLEIDENTIFIER app.gymplanner.uitests.xctrunner --macro-expansion TESTPRODUCTNAME GymPlannerUITests --macro-expansion TESTPRODUCTBUNDLEIDENTIFIER app.gymplanner.uitests --copy-value UIDeviceFamily /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest/Info.plist --outdir /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app -- /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PkgInfo /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCUnit.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCUnit.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCUIAutomation.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCUIAutomation.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCTestSupport.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestSupport.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCTestCore.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTestCore.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCTest.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/XCTAutomationSupport.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+Copy /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks/Testing.framework /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -exclude Headers -exclude PrivateHeaders -exclude Modules -exclude \*.tbd -resolve-src-symlinks /Applications/Xcode_26.6.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/Testing.framework /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/Frameworks
+
+RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    builtin-RegisterExecutionPolicyException /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest
+
+Touch /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest (in target 'GymPlannerUITests' from project 'GymPlanner')
+    cd /Users/runner/work/gym-planner-ios/gym-planner-ios
+    /usr/bin/touch -c /Users/runner/work/gym-planner-ios/gym-planner-ios/build/DerivedDataSim/Build/Products/Debug-iphonesimulator/GymPlannerUITests-Runner.app/PlugIns/GymPlannerUITests.xctest
+
+2026-11-11 04:55:31.678384+0000 GymPlanner[19454:59436] [default] Failed to resolve host network app id to config: bundleID: com.apple.WebKit.Networking instance ID: Optional([_EXExtensionInstanceIdentifier: 351ECD69-6BDE-46B1-97EC-3AEF0B92BE08])
+2026-11-11 04:55:32.645142+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request storage access quirks from WebPrivacy.
+2026-11-11 04:55:32.645369+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request known fingerprinting scripts from WebPrivacy: Error Domain=WebPrivacyErrorDomain Code=1001 "List data not found" UserInfo={NSLocalizedDescription=List data not found}
+2026-11-11 04:55:32.645427+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request storage access user agent string quirks from WebPrivacy.
+2026-11-11 04:55:33.056839+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request query parameters from WebPrivacy.
+2026-11-11 04:55:33.625958+0000 GymPlanner[19454:59586] [ResourceLoadStatistics] WebContent[19916] Unable to filter tracking query parameters (missing data)
+2026-11-11 04:55:33.640916+0000 GymPlanner[19454:59586] [ResourceLoadStatistics] WebContent[19916] Unable to hide query parameters from script (missing data)
+2026-11-11 04:55:34.347221+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request allowed query parameters from WebPrivacy.
+2026-11-11 04:55:34.347418+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request restricted opener domains from WebPrivacy
+Test Suite 'All tests' started at 2026-11-11 04:55:34.372.
+Test Suite 'GymPlannerTests.xctest' started at 2026-11-11 04:55:34.372.
+Test Suite 'AppTests' started at 2026-11-11 04:55:34.372.
+Test Case '-[GymPlannerTests.AppTests testPageRunsAndItsStorageIsMirrored]' started (Iteration 1 of 3).
+2026-11-11 04:55:34.860964+0000 GymPlanner[19454:59586] [ResourceLoadStatistics] WebContent[19986] Unable to hide query parameters from script (missing data)
+2026-11-11 04:55:34.863824+0000 GymPlanner[19454:58416] [ResourceLoadStatistics] Failed to request allowed query parameters from WebPrivacy.
+Test Case '-[GymPlannerTests.AppTests testPageRunsAndItsStorageIsMirrored]' passed (1.283 seconds).
+Test Case '-[GymPlannerTests.AppTests testSavedDataFallsBackToThePreviousCopy]' started (Iteration 1 of 3).
+Test Case '-[GymPlannerTests.AppTests testSavedDataFallsBackToThePreviousCopy]' passed (0.016 seconds).
+Test Case '-[GymPlannerTests.AppTests testSavedDataSurvivesARestart]' started (Iteration 1 of 3).
+Test Case '-[GymPlannerTests.AppTests testSavedDataSurvivesARestart]' passed (0.006 seconds).
+Test Case '-[GymPlannerTests.AppTests testStartScriptCarriesSavedValuesSafely]' started (Iteration 1 of 3).
+Test Case '-[GymPlannerTests.AppTests testStartScriptCarriesSavedValuesSafely]' passed (0.002 seconds).
+Test Suite 'AppTests' passed at 2026-11-11 04:55:35.682.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.306 (1.310) seconds
+Test Suite 'GymPlannerTests.xctest' passed at 2026-11-11 04:55:35.686.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.306 (1.313) seconds
+Test Suite 'All tests' passed at 2026-11-11 04:55:36.347.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 1.306 (1.975) seconds
+2026-11-11 04:55:39.601072+0000 GymPlannerUITests-Runner[20234:60454] [Default] Running tests...
+2026-11-11 04:55:39.657898+0000 GymPlannerUITests-Runner[20234:60502] [General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+2026-11-11 04:55:40.535132+0000 GymPlannerUITests-Runner[20234:60504] [General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+objc[20234]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x106e64310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x105a5c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+    t =      nans Interface orientation changed to Portrait
+Test Suite 'All tests' started at 2026-11-11 04:55:44.240.
+Test Suite 'GymPlannerUITests.xctest' started at 2026-11-11 04:55:44.240.
+Test Suite 'AppUITests' started at 2026-11-11 04:55:44.241.
+Test Case '-[GymPlannerUITests.AppUITests testFirstRunEveryTabAndDataSafety]' started (Iteration 1 of 3).
+    t =     0.00s Start Test at 2026-11-11 04:55:44.242
+    t =     0.83s Set Up
+2026-11-11 04:55:46.141 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-11-11 04:55:46.141 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =     0.84s Open app.gymplanner.ios
+    t =     0.84s     Launch app.gymplanner.ios
+    t =     9.11s         Setting up automation session
+    t =    10.46s         Wait for app.gymplanner.ios to idle
+    t =    11.95s Waiting 60.0s for "Set up your plan" StaticText to exist
+    t =    12.96s     Checking `Expect predicate `existsNoRetry == 1` for object "Set up your plan" StaticText`
+    t =    12.96s         Checking existence of `"Set up your plan" StaticText`
+    t =    17.14s Added attachment named '1-first-run'
+    t =    17.15s Checking existence of `"Man" StaticText`
+    t =    17.30s Checking existence of `"Woman" StaticText`
+    t =    17.43s Tap "Woman" StaticText
+    t =    17.43s     Wait for app.gymplanner.ios to idle
+    t =    17.45s     Find the "Woman" StaticText
+    t =    17.53s     Check for interrupting elements affecting "Woman" StaticText
+    t =    17.67s     Synthesize event
+    t =    19.26s     Wait for app.gymplanner.ios to idle
+    t =    20.82s Get number of matches for: Descendants matching type TextField
+    t =    22.81s Checking existence of `"Calories per day" TextField`
+    t =    23.82s Tap "Calories per day" TextField
+    t =    23.82s     Wait for app.gymplanner.ios to idle
+    t =    23.82s     Find the "Calories per day" TextField
+    t =    24.17s     Check for interrupting elements affecting "Calories per day" TextField
+    t =    24.45s     Synthesize event
+    t =    24.46s         Scroll element to visible
+    t =    24.47s         Find the "Calories per day" TextField
+    t =    24.79s         Computed hit point {125, 644} after scrolling to visible
+    t =    25.21s     Wait for app.gymplanner.ios to idle
+    t =    26.86s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    27.86s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    27.87s         Checking existence of `Keyboard (First Match)`
+    t =    28.21s Type '2600' into "Calories per day" TextField
+    t =    28.21s     Wait for app.gymplanner.ios to idle
+    t =    28.21s     Find the "Calories per day" TextField
+    t =    28.49s     Check for interrupting elements affecting "Calories per day" TextField
+    t =    28.60s     Synthesize event
+    t =    28.89s     Wait for app.gymplanner.ios to idle
+    t =    28.95s Checking existence of `"Protein per day (g)" TextField`
+    t =    29.17s Tap "Protein per day (g)" TextField
+    t =    29.17s     Wait for app.gymplanner.ios to idle
+    t =    29.17s     Find the "Protein per day (g)" TextField
+    t =    29.32s     Check for interrupting elements affecting "Protein per day (g)" TextField
+    t =    29.46s     Synthesize event
+    t =    29.81s     Wait for app.gymplanner.ios to idle
+    t =    30.00s Waiting 5.0s for Keyboard (First Match) to exist
+    t =    31.05s     Checking `Expect predicate `existsNoRetry == 1` for object Keyboard (First Match)`
+    t =    31.05s         Checking existence of `Keyboard (First Match)`
+    t =    31.08s Type '150' into "Protein per day (g)" TextField
+    t =    31.08s     Wait for app.gymplanner.ios to idle
+    t =    31.08s     Find the "Protein per day (g)" TextField
+    t =    31.15s     Check for interrupting elements affecting "Protein per day (g)" TextField
+    t =    31.20s     Synthesize event
+    t =    31.46s     Wait for app.gymplanner.ios to idle
+    t =    31.77s Added attachment named '2-setup-filled'
+    t =    31.77s Find the "Start" Button
+    t =    31.87s Tap "Start" Button
+    t =    31.87s     Wait for app.gymplanner.ios to idle
+    t =    31.87s     Find the "Start" Button
+    t =    31.94s     Check for interrupting elements affecting "Start" Button
+    t =    32.01s     Synthesize event
+    t =    32.51s     Wait for app.gymplanner.ios to idle
+    t =    32.75s Waiting 20.0s for "Food today" StaticText to exist
+    t =    33.82s     Checking `Expect predicate `existsNoRetry == 1` for object "Food today" StaticText`
+    t =    33.82s         Checking existence of `"Food today" StaticText`
+    t =    33.95s Waiting 10.0s for StaticText (First Match) to exist
+    t =    35.00s     Checking `Expect predicate `existsNoRetry == 1` for object StaticText (First Match)`
+    t =    35.00s         Checking existence of `StaticText (First Match)`
+    t =    36.39s Added attachment named '3-today'
+    t =    36.81s Tap "Food" Button
+    t =    36.81s     Wait for app.gymplanner.ios to idle
+    t =    36.82s     Find the "Food" Button
+    t =    36.92s     Check for interrupting elements affecting "Food" Button
+    t =    37.04s     Synthesize event
+    t =    37.39s     Wait for app.gymplanner.ios to idle
+    t =    37.39s Waiting 15.0s for "What did you eat?" StaticText to exist
+    t =    38.47s     Checking `Expect predicate `existsNoRetry == 1` for object "What did you eat?" StaticText`
+    t =    38.47s         Checking existence of `"What did you eat?" StaticText`
+    t =    40.17s Added attachment named '4-food'
+    t =    40.45s Tap "Gym" Button
+    t =    40.45s     Wait for app.gymplanner.ios to idle
+    t =    40.46s     Find the "Gym" Button
+    t =    40.51s     Check for interrupting elements affecting "Gym" Button
+    t =    40.56s     Synthesize event
+    t =    40.85s     Wait for app.gymplanner.ios to idle
+    t =    40.86s Waiting 15.0s for "Four-week cycle" StaticText to exist
+    t =    41.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Four-week cycle" StaticText`
+    t =    41.89s         Checking existence of `"Four-week cycle" StaticText`
+    t =    43.95s Added attachment named '4-gym'
+    t =    44.43s Tap "Coach" Button
+    t =    44.43s     Wait for app.gymplanner.ios to idle
+    t =    44.44s     Find the "Coach" Button
+    t =    44.58s     Check for interrupting elements affecting "Coach" Button
+    t =    44.67s     Synthesize event
+    t =    44.98s     Wait for app.gymplanner.ios to idle
+    t =    44.99s Waiting 15.0s for "What do you want to know?" StaticText to exist
+    t =    46.04s     Checking `Expect predicate `existsNoRetry == 1` for object "What do you want to know?" StaticText`
+    t =    46.04s         Checking existence of `"What do you want to know?" StaticText`
+    t =    47.62s Added attachment named '4-coach'
+    t =    47.63s Tap "More" Button
+    t =    47.63s     Wait for app.gymplanner.ios to idle
+    t =    47.63s     Find the "More" Button
+    t =    47.67s     Check for interrupting elements affecting "More" Button
+    t =    47.71s     Synthesize event
+    t =    48.00s     Wait for app.gymplanner.ios to idle
+    t =    48.01s Waiting 15.0s for Button (First Match) to exist
+    t =    49.07s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    49.07s         Checking existence of `Button (First Match)`
+    t =    49.31s Added attachment named '4-more'
+    t =    49.31s Tap Button (First Match)
+    t =    49.31s     Wait for app.gymplanner.ios to idle
+    t =    49.31s     Find the Button (First Match)
+    t =    49.35s     Check for interrupting elements affecting "Pills Your supplements and daily checklist" Button
+    t =    49.38s     Synthesize event
+    t =    49.68s     Wait for app.gymplanner.ios to idle
+    t =    49.72s Waiting 15.0s for "Your supplements" StaticText to exist
+    t =    50.76s     Checking `Expect predicate `existsNoRetry == 1` for object "Your supplements" StaticText`
+    t =    50.76s         Checking existence of `"Your supplements" StaticText`
+    t =    50.83s Checking existence of `"None yet" StaticText`
+    t =    52.11s Added attachment named '5-pills'
+    t =    52.11s Terminate app.gymplanner.ios:20968
+    t =    53.18s Open app.gymplanner.ios
+2026-11-11 04:56:37.459 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-11-11 04:56:37.459 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    53.19s     Launch app.gymplanner.ios
+    t =    55.19s         Setting up automation session
+    t =    57.19s         Wait for app.gymplanner.ios to idle
+    t =    58.73s Waiting 60.0s for "Food today" StaticText to exist
+    t =    59.79s     Checking `Expect predicate `existsNoRetry == 1` for object "Food today" StaticText`
+    t =    59.79s         Checking existence of `"Food today" StaticText`
+    t =    60.36s Waiting 10.0s for StaticText (First Match) to exist
+    t =    61.42s     Checking `Expect predicate `existsNoRetry == 1` for object StaticText (First Match)`
+    t =    61.42s         Checking existence of `StaticText (First Match)`
+    t =    61.46s Checking existence of `"Set up your plan" StaticText`
+    t =    61.50s Terminate app.gymplanner.ios:22900
+    t =    62.51s Open app.gymplanner.ios
+    t =    62.51s     Launch app.gymplanner.ios
+2026-11-11 04:56:46.755 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: The operation couldn’t be completed. (DebuggerLLDB.DebuggerVersionStore.StoreError error 0.)
+2026-11-11 04:56:46.756 xcodebuild[12174:39111] [MT] IDELaunchParametersSnapshot: no debugger version
+    t =    62.73s         Setting up automation session
+    t =    64.39s         Wait for app.gymplanner.ios to idle
+    t =    67.84s Waiting 60.0s for "Food today" StaticText to exist
+    t =    68.95s     Checking `Expect predicate `existsNoRetry == 1` for object "Food today" StaticText`
+    t =    69.03s         Checking existence of `"Food today" StaticText`
+    t =    69.36s Tear Down
+Test Case '-[GymPlannerUITests.AppUITests testFirstRunEveryTabAndDataSafety]' passed (69.938 seconds).
+Test Suite 'AppUITests' passed at 2026-11-11 04:56:54.181.
+	 Executed 1 test, with 0 failures (0 unexpected) in 69.938 (69.940) seconds
+Test Suite 'GymPlannerUITests.xctest' passed at 2026-11-11 04:56:54.182.
+	 Executed 1 test, with 0 failures (0 unexpected) in 69.938 (69.941) seconds
+Test Suite 'All tests' passed at 2026-11-11 04:56:54.182.
+	 Executed 1 test, with 0 failures (0 unexpected) in 69.938 (69.942) seconds
+2026-11-11 04:56:55.482 xcodebuild[12174:39111] [MT] IDETestOperationsObserverDebug: 134.694 elapsed -- Testing started completed.
+2026-11-11 04:56:55.482 xcodebuild[12174:39111] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-11-11 04:56:55.482 xcodebuild[12174:39111] [MT] IDETestOperationsObserverDebug: 134.694 sec, +134.694 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/runner/work/gym-planner-ios/gym-planner-ios/build/Tests-newest.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started
