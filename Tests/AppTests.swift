@@ -48,8 +48,10 @@ final class AppTests: XCTestCase {
         while Date() < deadline, (await js("typeof state === 'object' && document.getElementById('js-check').style.display === 'none'")) as? Bool != true {
             try await Task.sleep(nanoseconds: 200_000_000)
         }
-        XCTAssertEqual(await js("document.getElementById('js-check').style.display") as? String, "none", "The page's script ran to the end")
-        XCTAssertEqual(await js("location.protocol") as? String, "gymplanner:")
+        let checkBox = await js("document.getElementById('js-check').style.display") as? String
+        XCTAssertEqual(checkBox, "none", "The page's script ran to the end")
+        let scheme = await js("location.protocol") as? String
+        XCTAssertEqual(scheme, "gymplanner:")
 
         let key = "test-" + UUID().uuidString
         _ = await js("localStorage.setItem('\(key)', 'kept')")
@@ -60,7 +62,9 @@ final class AppTests: XCTestCase {
         for _ in 0..<50 where SavedData.shared.value(for: key) != nil { try await Task.sleep(nanoseconds: 100_000_000) }
         XCTAssertNil(SavedData.shared.value(for: key), "Deletions are copied too")
 
-        XCTAssertEqual(await js("typeof navigator.clipboard.writeText") as? String, "function")
-        XCTAssertEqual(await js("document.querySelector('meta[name=viewport]').content.includes('user-scalable=no')") as? Bool, true)
+        let clipboard = await js("typeof navigator.clipboard.writeText") as? String
+        XCTAssertEqual(clipboard, "function")
+        let fixedZoom = await js("document.querySelector('meta[name=viewport]').content.includes('user-scalable=no')") as? Bool
+        XCTAssertEqual(fixedZoom, true)
     }
 }
