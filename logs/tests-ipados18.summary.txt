@@ -1,0 +1,11 @@
+678:Test Case '-[GymPlannerTests.AppTests testPageRunsAndItsStorageIsMirrored]' passed (4.260 seconds).
+680:Test Case '-[GymPlannerTests.AppTests testSavedDataFallsBackToThePreviousCopy]' passed (0.050 seconds).
+682:Test Case '-[GymPlannerTests.AppTests testSavedDataSurvivesARestart]' passed (0.006 seconds).
+684:Test Case '-[GymPlannerTests.AppTests testStartScriptCarriesSavedValuesSafely]' passed (0.002 seconds).
+686:	 Executed 4 tests, with 0 failures (0 unexpected) in 4.318 (4.320) seconds
+688:	 Executed 4 tests, with 0 failures (0 unexpected) in 4.318 (4.321) seconds
+690:	 Executed 4 tests, with 0 failures (0 unexpected) in 4.318 (4.323) seconds
+838:Test Case '-[GymPlannerUITests.AppUITests testFirstRunEveryTabAndDataSafety]' passed (63.176 seconds).
+840:	 Executed 1 test, with 0 failures (0 unexpected) in 63.176 (63.177) seconds
+842:	 Executed 1 test, with 0 failures (0 unexpected) in 63.176 (63.178) seconds
+844:	 Executed 1 test, with 0 failures (0 unexpected) in 63.176 (63.182) seconds
